@@ -1,60 +1,36 @@
-<template>
-  <div>
-    <nav
-      class="navbar header has-shadow is-primary"
-      role="navigation"
-      aria-label="main navigation"
-    >
-      <div class="navbar-brand">
-        <a class="navbar-item" href="/">
-          <img src="~assets/buefy.png" alt="Buefy" height="28" />
-        </a>
-
-        <div class="navbar-burger">
-          <span />
-          <span />
-          <span />
-        </div>
-      </div>
-    </nav>
-
-    <section class="main-content columns">
-      <aside class="column is-2 section">
-        <p class="menu-label is-hidden-touch">General</p>
-        <ul class="menu-list">
-          <li v-for="(item, key) of items" :key="key">
-            <NuxtLink :to="item.to" exact-active-class="is-active">
-              <b-icon :icon="item.icon" /> {{ item.title }}
-            </NuxtLink>
-          </li>
-        </ul>
-      </aside>
-
-      <div class="container column is-10">
-        <Nuxt />
-      </div>
-    </section>
-  </div>
+<template lang="pug">
+.layout
+  b-navbar.has-shadow.is-primary
+    template(#brand)
+      b-navbar-item(tag="router-link" :to="{ path: '/' }")
+        img.mr-3(src="~assets/logo.png" alt="Buefy" height="28")
+        p.title.is-5 Gran Botonera CompuMundo
+    template(#end)
+      b-navbar-item(tag="div")
+        ModalSettings
+  section.main-content.columns
+    .container.column.is-10
+      Nuxt
 </template>
 
 <script>
 export default {
-  name: 'DefaultLayout',
-  data() {
-    return {
-      items: [
-        {
-          title: 'Home',
-          icon: 'home',
-          to: { name: 'index' },
-        },
-        {
-          title: 'Inspire',
-          icon: 'lightbulb',
-          to: { name: 'inspire' },
-        },
-      ],
-    }
-  },
+  name: 'DefaultLayout'
 }
 </script>
+
+<style lang="sass">
+@import "~bulma/sass/utilities/_all"
+
+html
+  background-color: $black
+</style>
+
+<style lang="sass" scoped>
+@import "~bulma/sass/utilities/_all"
+
+.layout ::v-deep
+  .navbar 
+    .title
+      color: $white
+</style>

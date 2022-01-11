@@ -1,0 +1,33 @@
+{
+    "dateUpdate": "2022-01-10",
+    "categories": [
+        "CompuMundo",
+        "Simpsons"
+    ],
+    "sounds": [
+        {
+            "title": "Marge: adios",
+            "file": {
+                "name": "adioos-marge.wav",
+                "format": "wav"
+            },
+            "categories": ["Simpsons"]
+        },
+        {
+            "title": "Carecoin: otra vez",
+            "file": {
+                "name": "cut carecoin otra vez.wav",
+                "format": "wav"
+            },
+            "categories": ["CompuMundo"]
+        },
+        {
+            "title": "Comercial Icel",
+            "file": {
+                "name": "comercial-icel.mp3",
+                "format": "mpeg"
+            },
+            "categories": []
+        }
+    ]
+}
