@@ -38,7 +38,6 @@ export default {
   },
   data() {
     return {
-      // buttonType: "modern", // "modern", "classic"
       nodeAudio: null,
       isPlaying: false,
       fill: { gradient: ['red', 'green', 'blue'] },

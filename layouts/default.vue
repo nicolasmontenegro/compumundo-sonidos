@@ -1,5 +1,7 @@
 <template lang="pug">
 .layout
+  script(src="stars.js")
+  canvas#canvas
   b-navbar.has-shadow.is-primary
     template(#brand)
       b-navbar-item(tag="router-link" :to="{ path: '/' }")
@@ -16,6 +18,9 @@
 <script>
 export default {
   name: 'DefaultLayout',
+  mounted() {
+
+  }
 }
 </script>
 
@@ -33,4 +38,14 @@ html
   .navbar
     .title
       color: $white
+
+#canvas 
+  position: fixed
+  height: 100vh
+  width: 100vw
+  top: 0
+  left: 0
+  z-index: 0
+  padding: 0
+  margin: 0
 </style>
