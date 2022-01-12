@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  name: 'DefaultLayout'
+  name: 'DefaultLayout',
 }
 </script>
 
@@ -30,7 +30,7 @@ html
 @import "~bulma/sass/utilities/_all"
 
 .layout ::v-deep
-  .navbar 
+  .navbar
     .title
       color: $white
 </style>
