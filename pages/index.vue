@@ -1,35 +1,42 @@
 <template lang="pug">
   section.section
-    .columns.mb-6
-      .column.is-3.is-flex.is-align-items-end
-        p.title.is-2 {{ filteredDBCount }} sonido{{ filteredDBCount == 1 ? '' : 's'}}
-      .column.is-3.is-offset-3
-        b-field(label="Filtro")
-          b-input(
-            placeholder="Buscar"
-            icon="magnify"
-            icon-right="close-circle"
-            type="search"
-            icon-right-clickable
-            v-model="search"
-            @icon-right-click="search = ''")
-      .column.is-3
-        b-field(label="Categorías")
-          b-taginput.is-rounded(
-            placeholder="Categorías"
-            icon="label"
-            autocomplete
-            :open-on-focus="true"
-            v-model="categoriesSelected"
-            :data="categoriesFiltered"
-            :ellipsis="true"
-            @typing="setCategoriesQuery")
-    .columns.is-flex-wrap-wrap
-      .column.is-2.item-sound(v-for="sound in filteredDB" :class="{'is-visible': sound.visible}")
-        AudioButton(v-bind="sound")
+    .columns
+      .container.column.is-10
+        .columns.mb-6
+          .column.is-3.is-flex.is-align-items-end
+            p.title.is-2 {{ filteredDBCount }} sonido{{ filteredDBCount == 1 ? '' : 's'}}
+          .column.is-3.is-offset-3
+            b-field(label="Filtro")
+              b-input(
+                placeholder="Buscar"
+                icon="magnify"
+                icon-right="close-circle"
+                type="search"
+                icon-right-clickable
+                v-model="search"
+                @icon-right-click="search = ''")
+          .column.is-3
+            b-field(label="Categorías")
+              b-taginput.is-rounded(
+                placeholder="Categorías"
+                icon="label"
+                autocomplete
+                :open-on-focus="true"
+                v-model="categoriesSelected"
+                :data="categoriesFiltered"
+                :ellipsis="true"
+                @typing="setCategoriesQuery")
+    .list-buttons(:class="{'container': !isWide}")
+      .columns.is-flex-wrap-wrap.is-mobile
+        .column.item-sound(
+          v-for="sound in filteredDB" 
+          :class="{'is-visible': sound.visible, 'is-6-mobile is-4-tablet is-2-desktop': !isWide, 'is-6-mobile is-2-tablet is-2-desktop is-1-widescreen': isWide}")
+          AudioButton(v-bind="sound")
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   name: 'IndexPage',
   async asyncData({ params, $axios }) {
@@ -60,6 +67,7 @@ export default {
           )
         : prefilter
     },
+    ...mapState('settings', ['isWide']),
   },
   watch: {
     categoriesSelected: {
@@ -97,7 +105,9 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.section
+.list-buttons
+  position: relative
+
   .item-sound
     &:not(.is-visible)
       display: none

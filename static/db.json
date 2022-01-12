@@ -3,14 +3,14 @@
   "categories": ["CompuMundo", "Simpsons"],
   "sounds": [
     {
-      "title": "NOOO.mp3",
+      "title": "NOOO",
       "file": {
         "name": "NOOO.mp3",
         "format": "mpeg"
       }
     },
     {
-      "title": "Se cancela el hospital.wav",
+      "title": "Se cancela el hospital",
       "file": {
         "name": "Se cancela el hospital.wav",
         "format": "wav"
@@ -18,7 +18,7 @@
       "categories": ["Simpsons"]
     },
     {
-      "title": "aaaaaah.wav",
+      "title": "aaaaaah",
       "file": {
         "name": "aaaaaah.wav",
         "format": "wav"
@@ -26,7 +26,7 @@
       "categories": ["Simpsons"]
     },
     {
-      "title": "adioos-marge.wav",
+      "title": "adioos-marge",
       "file": {
         "name": "adioos-marge.wav",
         "format": "wav"
@@ -34,7 +34,7 @@
       "categories": ["Simpsons"]
     },
     {
-      "title": "atomos.wav",
+      "title": "atomos",
       "file": {
         "name": "atomos.wav",
         "format": "wav"
@@ -42,14 +42,14 @@
       "categories": ["Simpsons"]
     },
     {
-      "title": "comercial-icel.mp3",
+      "title": "comercial-icel",
       "file": {
         "name": "comercial-icel.mp3",
         "format": "mpeg"
       }
     },
     {
-      "title": "compumundo.wav",
+      "title": "compumundo",
       "file": {
         "name": "compumundo.wav",
         "format": "wav"
@@ -57,7 +57,7 @@
       "categories": ["Simpsons"]
     },
     {
-      "title": "cut carecoin otra vez.wav",
+      "title": "cut carecoin otra vez",
       "file": {
         "name": "cut carecoin otra vez.wav",
         "format": "wav"
@@ -65,21 +65,21 @@
       "categories": ["CompuMundo"]
     },
     {
-      "title": "gaato.wav",
+      "title": "gaato",
       "file": {
         "name": "gaato.wav",
         "format": "wav"
       }
     },
     {
-      "title": "gente-de-la-computacion.wav",
+      "title": "gente-de-la-computacion",
       "file": {
         "name": "gente-de-la-computacion.wav",
         "format": "wav"
       }
     },
     {
-      "title": "maldito-aparato.wav",
+      "title": "maldito-aparato",
       "file": {
         "name": "maldito-aparato.wav",
         "format": "wav"
@@ -87,7 +87,7 @@
       "categories": ["Simpsons"]
     },
     {
-      "title": "malirsal.wav",
+      "title": "malirsal",
       "file": {
         "name": "malirsal.wav",
         "format": "wav"
@@ -95,14 +95,14 @@
       "categories": ["Simpsons"]
     },
     {
-      "title": "nintendos.wav",
+      "title": "nintendos",
       "file": {
         "name": "nintendos.wav",
         "format": "wav"
       }
     },
     {
-      "title": "pizza.wav",
+      "title": "pizza",
       "file": {
         "name": "pizza.wav",
         "format": "wav"
@@ -110,7 +110,7 @@
       "categories": ["Simpsons"]
     },
     {
-      "title": "que_no_lisa.wav",
+      "title": "que_no_lisa",
       "file": {
         "name": "que_no_lisa.wav",
         "format": "wav"
@@ -118,7 +118,7 @@
       "categories": ["Simpsons"]
     },
     {
-      "title": "queagradablesujeto.wav",
+      "title": "queagradablesujeto",
       "file": {
         "name": "queagradablesujeto.wav",
         "format": "wav"
@@ -126,7 +126,7 @@
       "categories": ["Simpsons"]
     },
     {
-      "title": "salemal.wav",
+      "title": "salemal",
       "file": {
         "name": "salemal.wav",
         "format": "wav"
@@ -134,7 +134,7 @@
       "categories": ["Simpsons"]
     },
     {
-      "title": "ustednoaprende.wav",
+      "title": "ustednoaprende",
       "file": {
         "name": "ustednoaprende.wav",
         "format": "wav"
@@ -142,7 +142,7 @@
       "categories": ["Simpsons"]
     },
     {
-      "title": "vino-marge.wav",
+      "title": "vino-marge",
       "file": {
         "name": "vino-marge.wav",
         "format": "wav"
@@ -150,7 +150,7 @@
       "categories": ["Simpsons"]
     },
     {
-      "title": "y2mate.com - imitacion culia penca de la march.mp3",
+      "title": "y2mate.com - imitacion culia penca de la march",
       "file": {
         "name": "y2mate.com - imitacion culia penca de la march.mp3",
         "format": "mpeg"

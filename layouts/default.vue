@@ -6,7 +6,7 @@
   template
     .bg-special#stars(:class="{hide: !(bgStyle === 'tebi')}")
     .bg-special#tebi(:class="{hide: !(bgStyle === 'tebi')}")
-  b-navbar.has-shadow.is-primary
+  b-navbar.has-shadow.is-primary(:close-on-click="false")
     template(#brand)
       b-navbar-item(tag="router-link" :to="{ path: '/' }")
         img.mr-3(src="~assets/logo.png" alt="Buefy" height="28")
@@ -14,9 +14,8 @@
     template(#end)
       b-navbar-item(tag="div")
         ModalSettings
-  section.main-content.columns
-    .container.column.is-10
-      Nuxt
+  .main-content
+    Nuxt
 </template>
 
 <script>
@@ -35,6 +34,7 @@ export default {
 
 html
   background-color: $black
+  overflow-y: auto !important
 </style>
 
 <style lang="sass" scoped>

@@ -6,31 +6,62 @@
   b-modal(v-model='isModalActive' @after-enter="refreshDevices()")
     .modal-card(style='width: auto')
       header.modal-card-head
-        p.modal-card-title Configuración
+        p.modal-card-title 
+          b-icon.mr-2(icon='cog')
+          | Configuración
       section.modal-card-body
-        b-field(label='Estilo de fondo')
-          b-select(v-model='bgStyle')
-            option(v-for='option in bgStyles' :value='option.value' :label="option.label" :key='option.value')
-        b-field(label='Estilo de botonera')
-          b-select(v-model='buttonType' )
-            option(v-for='option in buttonTypes' :value='option.value' :label="option.label" :key='option.value')
-        b-field(label="Para usar la opción de salida de audio, primero debes autorizar el uso de micrófono"  v-if="!isAuth && isCompatible")
-          b-button(label='Solicitar permiso' type="is-primary"  @click="refreshDevices()")
-        b-field(label='Dispotivo de salida de audio')
-          b-select(v-model='selectedDevice' :disabled="!isCompatible || !isAuth" expanded)
-            option(v-for='option in listDevices' :value='option.deviceId' :label="option.label" :key='option.deviceId')
-        p(v-if="!isCompatible")
-          i Tu navegador no es compatible con esta opción  
+        b-tabs(:type="'is-boxed'" :animateInitially="true" :vertical="tabsVertical")
+          b-tab-item(label="Estilo" icon="palette-swatch-outline")
+            b-field(label='Estilo de fondo')
+              b-select(v-model='bgStyle')
+                option(v-for='option in bgStyles' :value='option.value' :label="option.label" :key='option.value')
+            b-field(label='Estilo de botonera')
+              b-select(v-model='buttonType' )
+                option(v-for='option in buttonTypes' :value='option.value' :label="option.label" :key='option.value')
+            b-field(label='Espacio de botonera')
+              b-checkbox(v-model="isWide") La botonera ocupa todo el ancho disponible
+          b-tab-item(label="Comportamiento" icon="gesture-tap-button")
+            b-field(label='Al hacer click nuevamente en un botón...')
+              b-radio-button(v-model="clickRepeatSound" :native-value="false" type="is-primary is-light is-outlined")
+                b-icon(icon="stop")
+                span Detiene el audio
+              b-radio-button(v-model="clickRepeatSound" :native-value="true" type="is-primary is-light is-outlined")
+                b-icon(icon="repeat")
+                span Reinicia el audio
+            b-field(label='Al hacer click en otro botón...')
+              b-radio-button(v-model="clickStopOtherSound" :native-value="false" type="is-primary is-light is-outlined")
+                b-icon(icon="shuffle-disabled")
+                span Reproduce ambos audios simultaneamente
+              b-radio-button(v-model="clickStopOtherSound" :native-value="true" type="is-primary is-light is-outlined")
+                b-icon(icon="call-merge")
+                span Detiene el otro audio
+            b-field(label='Al hacer click fuera de botón ¿detiene el audio?')
+              b-radio-button(v-model="clickOutsideStop" :native-value="false" type="is-primary is-light is-outlined" :disabled="!clickStopOtherSound")
+                b-icon(icon="close")
+                span No
+              b-radio-button(v-model="clickOutsideStop" :native-value="true" type="is-primary is-light is-outlined" :disabled="!clickStopOtherSound")
+                b-icon(icon="check")
+                span Sí
+          b-tab-item(label="Salida" icon="connection")
+            b-field(label="Para usar la opción de salida de audio, primero debes autorizar el uso de micrófono"  v-if="!isAuth && isCompatible")
+              b-button(label='Solicitar permiso' type="is-primary"  @click="refreshDevices()")
+            b-field(label='Dispotivo de salida de audio')
+              b-select(v-model='selectedDevice' :disabled="!isCompatible || !isAuth" expanded)
+                option(v-for='option in listDevices' :value='option.deviceId' :label="option.label" :key='option.deviceId')
+            p(v-if="!isCompatible")
+              i Tu navegador no es compatible con esta opción  
 
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
+import exportedVars from '~/assets/sass/export.sass' 
 
 export default {
   name: 'ModalSettings',
   data() {
     return {
+      windowWidth: window.innerWidth,
       isModalActive: false,
       listDevices: [
         {
@@ -44,6 +75,9 @@ export default {
     }
   },
   computed: {
+    tabsVertical() {
+      return this.windowWidth >= Number(exportedVars.breakpointDesktop)
+    },
     isCompatible() {
       try {
         return Boolean(
@@ -77,10 +111,47 @@ export default {
         return this.$store.commit('settings/setBgStyles', newValue)
       },
     },
+    isWide: {
+      get() {
+        return this.$store.state.settings.isWide
+      },
+      set(newValue) {
+        return this.$store.commit('settings/setIsWide', newValue)
+      },
+    },
+    clickRepeatSound: {
+      get() {
+        return this.$store.state.settings.clickRepeatSound
+      },
+      set(newValue) {
+        return this.$store.commit('settings/setClickRepeatSound', newValue)
+      },
+    },
+    clickStopOtherSound: {
+      get() {
+        return this.$store.state.settings.clickStopOtherSound
+      },
+      set(newValue) {
+        return this.$store.commit('settings/setClickStopOtherSound', newValue)
+      },
+    },
+    clickOutsideStop: {
+      get() {
+        return this.$store.state.settings.clickOutsideStop
+      },
+      set(newValue) {
+        return this.$store.commit('settings/setClickOutsideStop', newValue)
+      },
+    },
     ...mapGetters({
       buttonTypes: 'settings/buttonTypes',
       bgStyles: 'settings/bgStyles',
     }),
+  },
+  mounted() {
+    window.addEventListener('resize', () => {
+      this.windowWidth = window.innerWidth
+    })
   },
   methods: {
     refreshDevices() {
@@ -117,7 +188,29 @@ export default {
 
 <style lang="sass" scoped>
 @import "~bulma/sass/utilities/_all"
+
 .modal-settings ::v-deep
-  p
+  p, label
     color: $black
+  label.radio.button
+    span
+      white-space: break-spaces
+
+  .b-tabs
+    .tabs ul 
+      &::after
+        @include from($desktop)
+          content: ""
+          height: 100%
+          margin-left: auto
+          border-right-color: #dbdbdb
+          border-width: 1px
+          width: 1px
+          border-style: solid
+      li a
+        padding-top: 1rem
+        padding-bottom: 1rem
+
+    & > .tab-content
+      min-height: 200px
 </style>

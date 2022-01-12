@@ -1,12 +1,12 @@
 <template lang="pug">
-.sound-button.is-flex.is-flex-direction-column.is-justify-items-center.is-align-items-center
+.sound-button.is-flex.is-flex-direction-column.is-justify-items-center.is-align-items-center(v-click-outside="clickOutside")
   template(v-if="buttonType === 'modern'")
-    b-button(rounded size="is-large" type="is-primary " @click="playAudio" :class="{'is-light': isPlaying}") 
+    b-button(rounded size="is-large" type="is-primary " @click="togglePlayAudio" :class="{'is-light': isPlaying}") 
       b-icon(icon="volume-high")
   template(v-if="buttonType === 'classic'")
     .button-classic
-      img(v-if="!isPlaying" src="~assets/transparent_button_normal.png" @click="playAudio" )
-      img(v-else src="~assets/transparent_button_pressed.png" @click="playAudio")
+      img(v-if="!isPlaying" src="~assets/transparent_button_normal.png" @click="togglePlayAudio" )
+      img(v-else src="~assets/transparent_button_pressed.png" @click="togglePlayAudio")
   p.is-family-monospace.has-text-centered.title.is-6.is-dark.my-2 {{ title }}
   b-taglist(v-if="categories")
     b-tag(type="is-info" v-for="category in categories" :key="`${title}-${category}`") {{ category }} 
@@ -17,9 +17,13 @@
 
 <script>
 import { mapState } from 'vuex'
+import ClickOutside from 'vue-click-outside'
 
 export default {
   name: 'AudioButton',
+  directives: {
+    ClickOutside
+  },
   props: {
     title: {
       type: String,
@@ -44,12 +48,20 @@ export default {
     }
   },
   computed: {
-    ...mapState('settings', ['buttonType', 'selectedDevice']),
+    ...mapState('settings', ['buttonType', 'selectedDevice', 'clickRepeatSound', 'clickStopOtherSound', 'clickOutsideStop']),
   },
   watch: {
     selectedDevice() {
       this.setOutputDevice()
     },
+  },
+  created() {
+    this.$nuxt.$on(
+      'clickStopOtherSoundEvent', 
+      (component) => {
+        if (component !== this)
+          this.stopAudio(true)
+      })
   },
   mounted() {
     this.nodeAudio = this.$el.querySelector('audio')
@@ -60,15 +72,27 @@ export default {
       this.isPlaying = false
     }
     this.setOutputDevice()
+
+    this.popupItem = this.$el
   },
   methods: {
-    playAudio() {
+    togglePlayAudio() {
       if (this.isPlaying) {
-        this.nodeAudio.pause()
-        this.nodeAudio.currentTime = 0
-        this.isPlaying = false
+        this.stopAudio()
       } else {
-        this.nodeAudio.play()
+        this.playAudio()
+      }
+    },
+    playAudio() {
+      this.nodeAudio.play()
+      if (this.clickStopOtherSound)
+        this.$nuxt.$emit('clickStopOtherSoundEvent', this)
+    },
+    stopAudio(force=false) {
+      this.nodeAudio.currentTime = 0
+      if (!this.clickRepeatSound || force) {
+        this.nodeAudio.pause()
+        this.isPlaying = false
       }
     },
     setOutputDevice() {
@@ -76,7 +100,11 @@ export default {
         this.nodeAudio.setSinkId(this.selectedDevice).then(() => {})
       } catch (e) {}
     },
-  },
+    clickOutside() {
+      if (this.clickOutsideStop)
+        this.stopAudio(true)
+    }
+  }
 }
 </script>
 
