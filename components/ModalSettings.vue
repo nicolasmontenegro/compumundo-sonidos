@@ -8,6 +8,9 @@
       header.modal-card-head
         p.modal-card-title Configuración
       section.modal-card-body
+        b-field(label='Estilo de fondo')
+          b-select(v-model='bgStyle')
+            option(v-for='option in bgStyles' :value='option.value' :label="option.label" :key='option.value')
         b-field(label='Estilo de botonera')
           b-select(v-model='buttonType' )
             option(v-for='option in buttonTypes' :value='option.value' :label="option.label" :key='option.value')
@@ -66,8 +69,17 @@ export default {
         return this.$store.commit('settings/setSelectedDevice', newValue)
       },
     },
+    bgStyle: {
+      get() {
+        return this.$store.state.settings.bgStyle
+      },
+      set(newValue) {
+        return this.$store.commit('settings/setBgStyles', newValue)
+      },
+    },
     ...mapGetters({
       buttonTypes: 'settings/buttonTypes',
+      bgStyles: 'settings/bgStyles',
     }),
   },
   methods: {

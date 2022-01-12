@@ -1,7 +1,11 @@
 <template lang="pug">
 .layout
   script(src="stars.js")
-  canvas#canvas
+  template
+    canvas.bg-special#canvas(:class="{hide: !(bgStyle === 'stars')}")
+  template
+    .bg-special#stars(:class="{hide: !(bgStyle === 'tebi')}")
+    .bg-special#tebi(:class="{hide: !(bgStyle === 'tebi')}")
   b-navbar.has-shadow.is-primary
     template(#brand)
       b-navbar-item(tag="router-link" :to="{ path: '/' }")
@@ -16,11 +20,13 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   name: 'DefaultLayout',
-  mounted() {
-
-  }
+  computed: {
+    ...mapState('settings', ['bgStyle']),
+  },
 }
 </script>
 
@@ -39,13 +45,21 @@ html
     .title
       color: $white
 
-#canvas 
-  position: fixed
-  height: 100vh
-  width: 100vw
-  top: 0
-  left: 0
-  z-index: 0
-  padding: 0
-  margin: 0
+  .bg-special 
+    position: fixed
+    height: 100vh
+    width: 100vw
+    top: 0
+    left: 0
+    z-index: 0
+    padding: 0
+    margin: 0
+
+    &.hide
+      display: none
+
+  #tebi
+    background: url('/baby.gif') repeat
+  #stars
+    background: url('/stars.gif') repeat
 </style>
