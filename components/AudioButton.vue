@@ -60,8 +60,6 @@ export default {
     this.nodeAudio.onended = (event) => {
       this.isPlaying = false
     }
-  },
-  afterMounted() {
     this.setOutputDevice()
   },
   methods: {
@@ -100,7 +98,7 @@ export default {
     width: 4rem
 
     img
-      background-color: blue
+      background-color: $blue
       border-radius: 50%
       width: auto
       height: 100%
@@ -110,7 +108,4 @@ export default {
 
   .fade-enter, .fade-leave-to
     opacity: 0
-
-
-/*
 </style>
