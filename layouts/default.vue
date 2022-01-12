@@ -13,6 +13,8 @@
         p.title.is-5 Gran Botonera CompuMundo
     template(#end)
       b-navbar-item(tag="div")
+        FullscreenButton
+      b-navbar-item(tag="div")
         ModalSettings
   .main-content
     Nuxt

@@ -2,7 +2,7 @@
 .modal-settings
   span.is-clickable(@click='isModalActive = true')
     b-icon.mr-2(icon='cog' size="is-small")
-    | Configuracion
+    span Configuracion
   b-modal(v-model='isModalActive' @after-enter="refreshDevices()")
     .modal-card(style='width: auto')
       header.modal-card-head
@@ -33,7 +33,7 @@
                 b-icon(icon="shuffle-disabled")
                 span Reproduce ambos audios simultaneamente
               b-radio-button(v-model="clickStopOtherSound" :native-value="true" type="is-primary is-light is-outlined")
-                b-icon(icon="call-merge")
+                b-icon(icon="call-merge" custom-class="mdi-rotate-90")
                 span Detiene el otro audio
             b-field(label='Al hacer click fuera de botón ¿detiene el audio?')
               b-radio-button(v-model="clickOutsideStop" :native-value="false" type="is-primary is-light is-outlined" :disabled="!clickStopOtherSound")
