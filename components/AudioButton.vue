@@ -65,10 +65,10 @@ export default {
   },
   mounted() {
     this.nodeAudio = this.$el.querySelector('audio')
-    this.nodeAudio.onplaying = (event) => {
+    this.nodeAudio.onplaying = () => {
       this.isPlaying = true
     }
-    this.nodeAudio.onended = (event) => {
+    this.nodeAudio.onended = () => {
       this.isPlaying = false
     }
     this.setOutputDevice()

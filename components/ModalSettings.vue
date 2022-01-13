@@ -34,7 +34,7 @@
                 span Reproduce ambos audios simultaneamente
               b-radio-button(v-model="clickStopOtherSound" :native-value="true" type="is-primary is-light is-outlined")
                 b-icon(icon="call-merge" custom-class="mdi-rotate-90")
-                span Detiene el otro audio
+                span Detiene el primer audio
             b-field(label='Al hacer click fuera de botón ¿detiene el audio?')
               b-radio-button(v-model="clickOutsideStop" :native-value="false" type="is-primary is-light is-outlined" :disabled="!clickStopOtherSound")
                 b-icon(icon="close")
@@ -212,5 +212,5 @@ export default {
         padding-bottom: 1rem
 
     & > .tab-content
-      min-height: 200px
+      min-height: 300px
 </style>

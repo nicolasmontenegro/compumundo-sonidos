@@ -13,11 +13,18 @@
         p.title.is-5 Gran Botonera CompuMundo
     template(#end)
       b-navbar-item(tag="div")
+        FilterButton
+      b-navbar-item(tag="div")
         FullscreenButton
       b-navbar-item(tag="div")
         ModalSettings
-  .main-content
+      b-navbar-item(tag="div")
+        ModalAbout
+  .main-content.is-flex.is-flex-direction-column.is-justify-content-space-between
     Nuxt
+    p.about.my-3.has-text-centered
+      | Desarrollado por 
+      a(href="https://chocochipslab.com/" target="_blank") NicoChocoChips
 </template>
 
 <script>
@@ -64,4 +71,11 @@ html
     background: url('/baby.gif') repeat
   #stars
     background: url('/stars.gif') repeat
+
+  .main-content
+    min-height: calc(100vh - 52px)
+
+    .about
+      color: $grey
+      position: relative
 </style>
