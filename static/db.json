@@ -4,157 +4,197 @@
   "sounds": [
     {
       "title": "NOOO",
-      "file": {
-        "name": "NOOO.mp3",
-        "format": "mpeg"
-      }
+      "files": [
+        {
+          "name": "NOOO.mp3",
+          "format": "mpeg"
+        }
+      ]
     },
     {
       "title": "Se cancela el hospital",
-      "file": {
-        "name": "Se cancela el hospital.wav",
-        "format": "wav"
-      },
+      "files": [
+        {
+          "name": "Se cancela el hospital.wav",
+          "format": "wav"
+        }
+      ],
       "categories": ["Simpsons"]
     },
     {
       "title": "aaaaaah",
-      "file": {
-        "name": "aaaaaah.wav",
-        "format": "wav"
-      },
+      "files": [
+        {
+          "name": "aaaaaah.wav",
+          "format": "wav"
+        }
+      ],
       "categories": ["Simpsons"]
     },
     {
       "title": "adioos-marge",
-      "file": {
-        "name": "adioos-marge.wav",
-        "format": "wav"
-      },
+      "files": [
+        {
+          "name": "adioos-marge.wav",
+          "format": "wav"
+        }
+      ],
       "categories": ["Simpsons"]
     },
     {
       "title": "atomos",
-      "file": {
-        "name": "atomos.wav",
-        "format": "wav"
-      },
+      "files": [
+        {
+          "name": "atomos.wav",
+          "format": "wav"
+        }
+      ],
       "categories": ["Simpsons"]
     },
     {
       "title": "comercial-icel",
-      "file": {
-        "name": "comercial-icel.mp3",
-        "format": "mpeg"
-      }
+      "files": [
+        {
+          "name": "comercial-icel.mp3",
+          "format": "mpeg"
+        }
+      ]
     },
     {
       "title": "compumundo",
-      "file": {
-        "name": "compumundo.wav",
-        "format": "wav"
-      },
+      "files": [
+        {
+          "name": "compumundo.wav",
+          "format": "wav"
+        }
+      ],
       "categories": ["Simpsons"]
     },
     {
       "title": "cut carecoin otra vez",
-      "file": {
-        "name": "cut carecoin otra vez.wav",
-        "format": "wav"
-      },
+      "files": [
+        {
+          "name": "cut carecoin otra vez.wav",
+          "format": "wav"
+        }
+      ],
       "categories": ["CompuMundo"]
     },
     {
       "title": "gaato",
-      "file": {
-        "name": "gaato.wav",
-        "format": "wav"
-      }
+      "files": [
+        {
+          "name": "gaato.wav",
+          "format": "wav"
+        }
+      ]
     },
     {
       "title": "gente-de-la-computacion",
-      "file": {
-        "name": "gente-de-la-computacion.wav",
-        "format": "wav"
-      }
+      "files": [
+        {
+          "name": "gente-de-la-computacion.wav",
+          "format": "wav"
+        }
+      ]
     },
     {
       "title": "maldito-aparato",
-      "file": {
-        "name": "maldito-aparato.wav",
-        "format": "wav"
-      },
+      "files": [
+        {
+          "name": "maldito-aparato.wav",
+          "format": "wav"
+        }
+      ],
       "categories": ["Simpsons"]
     },
     {
       "title": "malirsal",
-      "file": {
-        "name": "malirsal.wav",
-        "format": "wav"
-      },
+      "files": [
+        {
+          "name": "malirsal.wav",
+          "format": "wav"
+        }
+      ],
       "categories": ["Simpsons"]
     },
     {
       "title": "nintendos",
-      "file": {
-        "name": "nintendos.wav",
-        "format": "wav"
-      }
+      "files": [
+        {
+          "name": "nintendos.wav",
+          "format": "wav"
+        }
+      ]
     },
     {
       "title": "pizza",
-      "file": {
-        "name": "pizza.wav",
-        "format": "wav"
-      },
+      "files": [
+        {
+          "name": "pizza.wav",
+          "format": "wav"
+        }
+      ],
       "categories": ["Simpsons"]
     },
     {
       "title": "que_no_lisa",
-      "file": {
-        "name": "que_no_lisa.wav",
-        "format": "wav"
-      },
+      "files": [
+        {
+          "name": "que_no_lisa.wav",
+          "format": "wav"
+        }
+      ],
       "categories": ["Simpsons"]
     },
     {
       "title": "queagradablesujeto",
-      "file": {
-        "name": "queagradablesujeto.wav",
-        "format": "wav"
-      },
+      "files": [
+        {
+          "name": "queagradablesujeto.wav",
+          "format": "wav"
+        }
+      ],
       "categories": ["Simpsons"]
     },
     {
       "title": "salemal",
-      "file": {
-        "name": "salemal.wav",
-        "format": "wav"
-      },
+      "files": [
+        {
+          "name": "salemal.wav",
+          "format": "wav"
+        }
+      ],
       "categories": ["Simpsons"]
     },
     {
       "title": "ustednoaprende",
-      "file": {
-        "name": "ustednoaprende.wav",
-        "format": "wav"
-      },
+      "files": [
+        {
+          "name": "ustednoaprende.wav",
+          "format": "wav"
+        }
+      ],
       "categories": ["Simpsons"]
     },
     {
       "title": "vino-marge",
-      "file": {
-        "name": "vino-marge.wav",
-        "format": "wav"
-      },
+      "files": [
+        {
+          "name": "vino-marge.wav",
+          "format": "wav"
+        }
+      ],
       "categories": ["Simpsons"]
     },
     {
       "title": "y2mate.com - imitacion culia penca de la march",
-      "file": {
-        "name": "y2mate.com - imitacion culia penca de la march.mp3",
-        "format": "mpeg"
-      }
+      "files": [
+        {
+          "name": "y2mate.com - imitacion culia penca de la march.mp3",
+          "format": "mpeg"
+        }
+      ]
     }
   ]
 }
