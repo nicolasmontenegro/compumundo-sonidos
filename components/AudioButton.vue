@@ -11,7 +11,7 @@
   b-taglist(v-if="categories")
     b-tag(type="is-info" v-for="category in categories" :key="`${title}-${category}`") {{ category }} 
   audio
-    source(v-for="file in files" :src="`/sounds/${file.name}`" :type="`audio/${file.format}`" :key="`${file.name}`")
+    source(v-for="file in files" :src="`/sounds/${filename}.${file.extension}`" :type="`${file.codec}`" :key="`${filename}.${file.extension}`")
     | ERROR
 </template>
 
@@ -26,6 +26,10 @@ export default {
   },
   props: {
     title: {
+      type: String,
+      required: true,
+    },
+    filename: {
       type: String,
       required: true,
     },

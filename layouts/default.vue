@@ -1,11 +1,14 @@
 <template lang="pug">
 .layout
   script(src="stars.js")
-  template
-    canvas.bg-special#canvas(:class="{hide: !(bgStyle === 'stars')}")
-  template
-    .bg-special#stars(:class="{hide: !(bgStyle === 'tebi')}")
-    .bg-special#tebi(:class="{hide: !(bgStyle === 'tebi')}")
+  template(v-if="bgStyle === 'stars'")
+    canvas.bg-special#canvas
+  template(v-if="bgStyle === 'tebi'")
+    .bg-special#stars
+    .bg-special#tebi
+  template(v-if="bgStyle === 'telowide'")
+    video#telowide(autoplay loop muted)
+      source(src="bg/telowide.mp4")
   b-navbar.has-shadow.is-primary(:close-on-click="false")
     template(#brand)
       b-navbar-item(tag="router-link" :to="{ path: '/' }")
@@ -30,11 +33,19 @@
 <script>
 import { mapState } from 'vuex'
 
+prototype.initStarAnimation = window.initAnimation;
+
 export default {
   name: 'DefaultLayout',
   computed: {
     ...mapState('settings', ['bgStyle']),
   },
+  watch: {
+    bgStyle(newValue) {
+       if (newValue === 'stars')
+        this.initStarAnimation();
+    }
+  }
 }
 </script>
 
@@ -68,9 +79,15 @@ html
       display: none
 
   #tebi
-    background: url('/baby.gif') repeat
+    background: url('bg//baby.gif') repeat
   #stars
-    background: url('/stars.gif') repeat
+    background: url('bg//stars.gif') repeat
+  #telowide
+    position: fixed
+    height: 100vh
+    width: 100vw
+    overflow: hidden
+    object-fit: cover
 
   .main-content
     min-height: calc(100vh - 52px)

@@ -11,11 +11,6 @@ const setCanvasExtents = () => {
     canvas.height = h;
 };
 
-setCanvasExtents();
-
-window.onresize = () => {
-    setCanvasExtents();
-};
 
 const makeStars = count => {
     const out = [];
@@ -97,4 +92,12 @@ const tick = time => {
     requestAnimationFrame(tick);
 };
 
-requestAnimationFrame(init);
+const initAnimation = () => {
+    setCanvasExtents();
+    window.onresize = () => {
+        setCanvasExtents();
+    };
+    requestAnimationFrame(init) 
+};
+
+export default initAnimation;

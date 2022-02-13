@@ -42,6 +42,8 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    // https://github.com/pimlie/nuxt-rfg-icon
+    'nuxt-rfg-icon'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -59,4 +61,14 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+  /*
+  ** RealFaviconGenerator Favicon's for NUXT
+  */
+  'rfg-icon': {
+    force: true,
+    static: true,
+    staticPath: '/_favicons/',
+    masterPicture: 'static/icon.png',
+    rfg: require('./assets/faviconDescription.json')
+  },
 }

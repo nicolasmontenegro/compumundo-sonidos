@@ -91,3 +91,5 @@ sw.*
 
 # Project files
 static/sounds
+static/db.json
+static/_favicons

@@ -1,0 +1,25 @@
+{
+    "dateUpdate": "2022-01-10",
+    "categories": [
+        "Simpsons",
+    ],
+    "sounds": [
+        {
+            "title": "Se cancela el hospital",
+            "filename": "Se cancela el hospital",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wav"
+                }
+            ],
+            "categories": [
+                "Simpsons"
+            ]
+        }
+    ]
+}

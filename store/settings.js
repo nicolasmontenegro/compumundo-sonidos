@@ -61,6 +61,10 @@ export const getters = {
         label: 'Tebi.moe',
         value: 'tebi',
       },
+      {
+        label: 'Telo Wide',
+        value: 'telowide',
+      },
     ]
   },
 }
