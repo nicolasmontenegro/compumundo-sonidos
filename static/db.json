@@ -1,200 +1,1504 @@
 {
-  "dateUpdate": "2022-01-10",
-  "categories": ["CompuMundo", "Simpsons"],
-  "sounds": [
-    {
-      "title": "NOOO",
-      "files": [
+    "dateUpdate": "2022-02-13",
+    "categories": [
+        "CompuMundo",
+        "Simpsons",
+        "Futurama",
+        "Yrion",
+        "Futaba",
+        "Don Francisco",
+        "Meme",
+        "TV",
+        "CaReCoiN",
+        "MatiDTV",
+        "Idkzx",
+        "ChocoChips",
+        "TeLoDoyVuelta",
+        "Videojuegos"
+    ],
+    "sounds": [
         {
-          "name": "NOOO.mp3",
-          "format": "mpeg"
-        }
-      ]
-    },
-    {
-      "title": "Se cancela el hospital",
-      "files": [
+            "title": "NOOO",
+            "filename": "NOOO",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "mp3",
+                    "codec": "audio/mpeg"
+                }
+            ]
+        },
         {
-          "name": "Se cancela el hospital.wav",
-          "format": "wav"
-        }
-      ],
-      "categories": ["Simpsons"]
-    },
-    {
-      "title": "aaaaaah",
-      "files": [
+            "title": "Se cancela el hospital",
+            "filename": "Se cancela el hospital",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wav"
+                }
+            ],
+            "categories": [
+                "Simpsons"
+            ]
+        },
         {
-          "name": "aaaaaah.wav",
-          "format": "wav"
-        }
-      ],
-      "categories": ["Simpsons"]
-    },
-    {
-      "title": "adioos-marge",
-      "files": [
+            "title": "aaaaaah",
+            "filename": "aaaaaah",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wav"
+                }
+            ],
+            "categories": [
+                "Simpsons"
+            ]
+        },
         {
-          "name": "adioos-marge.wav",
-          "format": "wav"
-        }
-      ],
-      "categories": ["Simpsons"]
-    },
-    {
-      "title": "atomos",
-      "files": [
+            "title": "Marge: adios",
+            "filename": "adioos-marge",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wav"
+                }
+            ],
+            "categories": [
+                "Simpsons"
+            ]
+        },
         {
-          "name": "atomos.wav",
-          "format": "wav"
-        }
-      ],
-      "categories": ["Simpsons"]
-    },
-    {
-      "title": "comercial-icel",
-      "files": [
+            "title": "A darle átomos",
+            "filename": "atomos",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wav"
+                }
+            ],
+            "categories": [
+                "Simpsons"
+            ]
+        },
         {
-          "name": "comercial-icel.mp3",
-          "format": "mpeg"
-        }
-      ]
-    },
-    {
-      "title": "compumundo",
-      "files": [
+            "title": "Comercial ICEL",
+            "filename": "comercial-icel",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "mp3",
+                    "codec": "audio/mpeg"
+                }
+            ],
+            "categories": [
+                "TV"
+            ]
+        },
         {
-          "name": "compumundo.wav",
-          "format": "wav"
-        }
-      ],
-      "categories": ["Simpsons"]
-    },
-    {
-      "title": "cut carecoin otra vez",
-      "files": [
+            "title": "CompuMundoHiperMegaRed",
+            "filename": "compumundo",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wav"
+                }
+            ],
+            "categories": [
+                "Simpsons"
+            ]
+        },
         {
-          "name": "cut carecoin otra vez.wav",
-          "format": "wav"
-        }
-      ],
-      "categories": ["CompuMundo"]
-    },
-    {
-      "title": "gaato",
-      "files": [
+            "title": "Otra Vez",
+            "filename": "cut carecoin otra vez",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wav"
+                }
+            ],
+            "categories": [
+                "CompuMundo",
+                "CaReCoiN"
+            ]
+        },
         {
-          "name": "gaato.wav",
-          "format": "wav"
-        }
-      ]
-    },
-    {
-      "title": "gente-de-la-computacion",
-      "files": [
+            "title": "¡Gato! ¡Gato!",
+            "filename": "gaato",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wav"
+                }
+            ],
+            "categories": [
+                "Futurama"
+            ]
+        },
         {
-          "name": "gente-de-la-computacion.wav",
-          "format": "wav"
-        }
-      ]
-    },
-    {
-      "title": "maldito-aparato",
-      "files": [
+            "title": "Un saludo a la gente que me ve en la computación",
+            "filename": "gente-de-la-computacion",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wav"
+                }
+            ],
+            "categories": [
+                "Meme"
+            ]
+        },
         {
-          "name": "maldito-aparato.wav",
-          "format": "wav"
-        }
-      ],
-      "categories": ["Simpsons"]
-    },
-    {
-      "title": "malirsal",
-      "files": [
+            "title": "Maldito aparato",
+            "filename": "maldito-aparato",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wav"
+                }
+            ],
+            "categories": [
+                "Simpsons"
+            ]
+        },
         {
-          "name": "malirsal.wav",
-          "format": "wav"
-        }
-      ],
-      "categories": ["Simpsons"]
-    },
-    {
-      "title": "nintendos",
-      "files": [
+            "title": "Malir sal",
+            "filename": "malirsal",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wav"
+                }
+            ],
+            "categories": [
+                "Simpsons"
+            ]
+        },
         {
-          "name": "nintendos.wav",
-          "format": "wav"
-        }
-      ]
-    },
-    {
-      "title": "pizza",
-      "files": [
+            "title": "Los Nintendos",
+            "filename": "nintendos",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wav"
+                }
+            ],
+            "categories": [
+                "Yrion"
+            ]
+        },
         {
-          "name": "pizza.wav",
-          "format": "wav"
-        }
-      ],
-      "categories": ["Simpsons"]
-    },
-    {
-      "title": "que_no_lisa",
-      "files": [
+            "title": "¡No había pizza!",
+            "filename": "pizza",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wav"
+                }
+            ],
+            "categories": [
+                "Simpsons"
+            ]
+        },
         {
-          "name": "que_no_lisa.wav",
-          "format": "wav"
-        }
-      ],
-      "categories": ["Simpsons"]
-    },
-    {
-      "title": "queagradablesujeto",
-      "files": [
+            "title": "Que no lisa",
+            "filename": "que_no_lisa",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wav"
+                }
+            ],
+            "categories": [
+                "Simpsons"
+            ]
+        },
         {
-          "name": "queagradablesujeto.wav",
-          "format": "wav"
-        }
-      ],
-      "categories": ["Simpsons"]
-    },
-    {
-      "title": "salemal",
-      "files": [
+            "title": "Que agradable sujeto",
+            "filename": "queagradablesujeto",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wav"
+                }
+            ],
+            "categories": [
+                "Simpsons"
+            ]
+        },
         {
-          "name": "salemal.wav",
-          "format": "wav"
-        }
-      ],
-      "categories": ["Simpsons"]
-    },
-    {
-      "title": "ustednoaprende",
-      "files": [
+            "title": "Sale mal",
+            "filename": "salemal",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wav"
+                }
+            ],
+            "categories": [
+                "Simpsons"
+            ]
+        },
         {
-          "name": "ustednoaprende.wav",
-          "format": "wav"
-        }
-      ],
-      "categories": ["Simpsons"]
-    },
-    {
-      "title": "vino-marge",
-      "files": [
+            "title": "Usted no aprende, verdad",
+            "filename": "ustednoaprende",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wav"
+                }
+            ],
+            "categories": [
+                "Simpsons"
+            ]
+        },
         {
-          "name": "vino-marge.wav",
-          "format": "wav"
-        }
-      ],
-      "categories": ["Simpsons"]
-    },
-    {
-      "title": "y2mate.com - imitacion culia penca de la march",
-      "files": [
+            "title": "Marge *toma vino*",
+            "filename": "vino-marge",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wav"
+                }
+            ],
+            "categories": [
+                "Simpsons"
+            ]
+        },
         {
-          "name": "y2mate.com - imitacion culia penca de la march.mp3",
-          "format": "mpeg"
+            "title": "Imitacion culia penca de la march [Marge]",
+            "filename": "y2mate.com - imitacion culia penca de la march",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "mp3",
+                    "codec": "audio/mpeg"
+                }
+            ],
+            "categories": [
+                "Meme",
+                "Simpsons"
+            ]
+        },
+        {
+            "title": "[Intro] Speech Mati",
+            "filename": "[Intro] Speech Mati",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "mp3",
+                    "codec": "audio/mpeg"
+                }
+            ],
+            "categories": [
+                "CompuMundo",
+                "MatiDTV"
+            ]
+        },
+        {
+            "title": "A no venderla",
+            "filename": "a no venderla",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "mp3",
+                    "codec": "audio/mpeg"
+                }
+            ],
+            "categories": [
+                "CompuMundo",
+                "TeLoDoyVuelta"
+            ]
+        },
+        {
+            "title": "Arturo Frei",
+            "filename": "arturofrei",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "TV"
+            ]
+        },
+        {
+            "title": "Todos bazofia",
+            "filename": "bazofia",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "Simpsons"
+            ]
+        },
+        {
+            "title": "Brujo",
+            "filename": "bruujo",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "Simpsons"
+            ]
+        },
+        {
+            "title": "Buen juego",
+            "filename": "buenjuego",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "mp3",
+                    "codec": "audio/mpeg"
+                }
+            ],
+            "categories": [
+                "Simpsons"
+            ]
+        },
+        {
+            "title": "¡Cortinas púrpura!",
+            "filename": "cortinas",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "Simpsons"
+            ]
+        },
+        {
+            "title": "Usted es diabólico",
+            "filename": "diabolico",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "Simpsons"
+            ]
+        },
+        {
+            "title": "Es de Ditoys",
+            "filename": "ditoys",
+            "files": [
+                {
+                    "extension": "mp3",
+                    "codec": "audio/mpeg"
+                },
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "TV",
+                "Meme"
+            ]
+        },
+        {
+            "title": "Don Pico",
+            "filename": "donpico",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "mp3",
+                    "codec": "audio/mpeg"
+                }
+            ],
+            "categories": [
+                "CompuMundo",
+                "TeLoDoyVuelta"
+            ]
+        },
+        {
+            "title": "En MP3",
+            "filename": "enmp3",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "mp3",
+                    "codec": "audio/mpeg"
+                }
+            ],
+            "categories": [
+                "Meme"
+            ]
+        },
+        {
+            "title": "Es tan barato",
+            "filename": "es-tan-barato",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "Simpsons"
+            ]
+        },
+        {
+            "title": "Esperanzas",
+            "filename": "esperanzas",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "Simpsons"
+            ]
+        },
+        {
+            "title": "Futaba_ali: estoy haciendo caca",
+            "filename": "futaba_ali estoy haciendo caca",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "Futaba"
+            ]
+        },
+        {
+            "title": "Futaba_ali: gatito traje",
+            "filename": "futaba_ali gatito traje",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "Futaba"
+            ]
+        },
+        {
+            "title": "Futaba_ali: juegate un loto coin",
+            "filename": "futaba_ali juegate un loto coin",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "Futaba"
+            ]
+        },
+        {
+            "title": "Futaba_ali: no puede estoy haciendo caca",
+            "filename": "futaba_ali no puede estoy haciendo caca",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "Futaba"
+            ]
+        },
+        {
+            "title": "Futaba_ali: no puedes decir ctm",
+            "filename": "futaba_ali no puedes decir ctm",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "Futaba"
+            ]
+        },
+        {
+            "title": "Futaba_ali: te voy a sacarte la ctm",
+            "filename": "futaba_ali te voy a sacarte la ctm",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "Futaba"
+            ]
+        },
+        {
+            "title": "Futaba_ali: wena te lodoylavuelta",
+            "filename": "futaba_ali wena te lodoylavuelta",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "Futaba"
+            ]
+        },
+        {
+            "title": "Hay tabla",
+            "filename": "haytabla",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "Simpsons"
+            ]
+        },
+        {
+            "title": "¿Pulpo en su salsa?",
+            "filename": "pulpoensusalsa",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "mp3",
+                    "codec": "audio/mpeg"
+                }
+            ],
+            "categories": [
+                "CompuMundo",
+                "CaReCoiN",
+                "Idkzx"
+            ]
+        },
+        {
+            "title": "Váyase al tiro",
+            "filename": "vayase-altiro",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "Don Francisco"
+            ]
+        },
+        {
+            "title": "¡Y se divertirán!",
+            "filename": "y se divertiran",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "mp3",
+                    "codec": "audio/mpeg"
+                }
+            ],
+            "categories": [
+                "TV"
+            ]
+        },
+        {
+            "title": "Yrion: 64pedazos",
+            "filename": "yrion-64pedazos",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "mp3",
+                    "codec": "audio/mpeg"
+                }
+            ],
+            "categories": [
+                "Yrion"
+            ]
+        },
+        {
+            "title": "Yrion: nico",
+            "filename": "yrion-nico",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "mp3",
+                    "codec": "audio/mpeg"
+                }
+            ],
+            "categories": [
+                "Yrion"
+            ]
+        },
+        {
+            "title": "Yrion: nintendos",
+            "filename": "yrion-nintendos",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "mp3",
+                    "codec": "audio/mpeg"
+                }
+            ],
+            "categories": [
+                "Yrion"
+            ]
+        },
+        {
+            "title": "Yrion: shusha",
+            "filename": "yrion-shusha",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "mp3",
+                    "codec": "audio/mpeg"
+                }
+            ],
+            "categories": [
+                "Yrion"
+            ]
+        },
+        {
+            "title": "Yrion: taaaaaa",
+            "filename": "yrion-taaaaaa",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "mp3",
+                    "codec": "audio/mpeg"
+                }
+            ],
+            "categories": [
+                "Yrion"
+            ]
+        },
+        {
+            "title": "Don Francisco: Ibamos tan bien",
+            "filename": "ibamos",
+            "files": [
+                {
+                    "extension": "mp3",
+                    "codec": "audio/mpeg"
+                },
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                }
+            ],
+            "categories": [
+                "Don Francisco"
+            ]
+        },
+        {
+            "title": "5 segundos de silencio",
+            "filename": "cut carecoin 5 segundos de silencio",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "CompuMundo",
+                "CaReCoiN"
+            ]
+        },
+        {
+            "title": "¿Alguien pa echarle raid?",
+            "filename": "cut carecoin alguien pa echarle raid",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "CompuMundo",
+                "CaReCoiN"
+            ]
+        },
+        {
+            "title": "¡Déjenme hablar!",
+            "filename": "cut carecoin dejenme hablar",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "CompuMundo",
+                "CaReCoiN"
+            ]
+        },
+        {
+            "title": "¡Déjenme jugar Mario!",
+            "filename": "cut carecoin dejenme jugar mario",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "CompuMundo",
+                "CaReCoiN"
+            ]
+        },
+        {
+            "title": "Grueso",
+            "filename": "cut carecoin grueso",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "CompuMundo",
+                "CaReCoiN"
+            ]
+        },
+        {
+            "title": "No debí haber dicho eso",
+            "filename": "cut carecoin no debí haber dicho eso",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "CompuMundo",
+                "CaReCoiN"
+            ]
+        },
+        {
+            "title": "Puta oh...",
+            "filename": "cut carecoin puta oh",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "CompuMundo",
+                "CaReCoiN"
+            ]
+        },
+        {
+            "title": "Superchupador",
+            "filename": "cut matidtv superchupador",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "CompuMundo",
+                "MatiDTV"
+            ]
+        },
+        {
+            "title": "Nescafé",
+            "filename": "nescafe",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "TV"
+            ]
+        },
+        {
+            "title": "Intro Carecoin (Usb C)",
+            "filename": "pitch mati intro carecoin usbc",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "CompuMundo",
+                "MatiDTV",
+                "CaReCoiN"
+            ]
+        },
+        {
+            "title": "Staaarlink",
+            "filename": "staaarlink",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "CompuMundo",
+                "Meme"
+            ]
+        },
+        {
+            "title": "Eres un insecto",
+            "filename": "Ers_un_insecto",
+            "files": [
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                },
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                }
+            ],
+            "categories": [
+                "TV"
+            ]
+        },
+        {
+            "title": "Aliño completo",
+            "filename": "aliño-completo",
+            "files": [
+                {
+                    "extension": "mp3",
+                    "codec": "audio/mpeg"
+                },
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                }
+            ],
+            "categories": [
+                "Meme"
+            ]
+        },
+        {
+            "title": "Riverito: Ocho",
+            "filename": "ocho-riverito",
+            "files": [
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                },
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                }
+            ],
+            "categories": [
+                "TV",
+                "Meme"
+            ]
+        },
+        {
+            "title": "Se esta bebiendo una vela",
+            "filename": "se-esta-bebiendo-una-vela",
+            "files": [
+                {
+                    "extension": "mp3",
+                    "codec": "audio/mpeg"
+                },
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                }
+            ],
+            "categories": [
+                "Simpsons"
+            ]
+        },
+        {
+            "title": "¡Somos más ricos que los de doblaje!",
+            "filename": "somosricos",
+            "files": [
+                {
+                    "extension": "mp3",
+                    "codec": "audio/mpeg"
+                },
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                }
+            ],
+            "categories": [
+                "Simpsons"
+            ]
+        },
+        {
+            "title": "Tal vez si",
+            "filename": "tal-vez-si",
+            "files": [
+                {
+                    "extension": "mp3",
+                    "codec": "audio/mpeg"
+                },
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                }
+            ],
+            "categories": [
+                "Simpsons"
+            ]
+        },
+        {
+            "title": "GUATAKAS: El NicoChocoChips",
+            "filename": "GUATAKAS el nico choco chips",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "ChocoChips"
+            ]
+        },
+        {
+            "title": "Braintoons: NicoChochoChips, bienvenido a la...",
+            "filename": "braintoons chochochips",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "ChocoChips"
+            ]
+        },
+        {
+            "title": "Don Francisco: Lentamente a la chucha",
+            "filename": "lentamentealachucha",
+            "files": [
+                {
+                    "extension": "mp3",
+                    "codec": "audio/mpeg"
+                },
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                }
+            ],
+            "categories": [
+                "Don Francisco"
+            ]
+        },
+        {
+            "title": "Don Francisco: No van a vender nada",
+            "filename": "novanavendernada",
+            "files": [
+                {
+                    "extension": "mp3",
+                    "codec": "audio/mpeg"
+                },
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                }
+            ],
+            "categories": [
+                "Don Francisco"
+            ]
+        },
+        {
+            "title": "Donkey Kong: Stage clear",
+            "filename": "dk stage clear",
+            "files": [
+                {
+                    "extension": "mp3",
+                    "codec": "audio/mpeg"
+                },
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                }
+            ],
+            "categories": [
+                "Videojuegos"
+            ]
+        },
+        {
+            "title": "¿Cuánto duré?",
+            "filename": "cut abuelo simpson cuanto dure",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "Simpsons"
+            ]
+        },
+        {
+            "title": "Eso me pasa por tener fé en ti",
+            "filename": "abuelo eso me pasa por tener fe en ti",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "Simpsons"
+            ]
+        },
+        {
+            "title": "¡Lo arruinarás!",
+            "filename": "abuelo lo arruinaraas",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "Simpsons"
+            ]
+        },
+        {
+            "title": "¡Ya cómete la maldita naranja!",
+            "filename": "abuelo ya comete la maldita naranja",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "Simpsons"
+            ]
+        },
+        {
+            "title": "Yo no lo entiendos...",
+            "filename": "apu yo no lo entiendos",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "Simpsons"
+            ]
+        },
+        {
+            "title": "Es y no es...",
+            "filename": "es y no es",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "Simpsons"
+            ]
+        },
+        {
+            "title": "¡Dame paz interior!",
+            "filename": "homero dame paz interior",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "Simpsons"
+            ]
+        },
+        {
+            "title": "La verdad... y la verdad",
+            "filename": "la verdad y la verdad",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "Simpsons"
+            ]
+        },
+        {
+            "title": "Eres un cobarde",
+            "filename": "marge eres un cobarde",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "Simpsons"
+            ]
+        },
+        {
+            "title": "¡Que te importa!",
+            "filename": "marge que te importa",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "Simpsons"
+            ]
+        },
+        {
+            "title": "Son de Ditoys",
+            "filename": "son-de-ditoys",
+            "files": [
+                {
+                    "extension": "mp3",
+                    "codec": "audio/mpeg"
+                },
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                }
+            ],
+            "categories": [
+                "TV"
+            ]
+        },
+        {
+            "title": "Helikopter! Helikopter!",
+            "filename": "helikopter",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "Meme"
+            ]
+        },
+        {
+            "title": "Para kofer! Para kofer!",
+            "filename": "para kofer",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "Meme"
+            ]
+        },
+        {
+            "title": "¡Debo haber parecido un idiota!",
+            "filename": "cur homero idiota",
+            "files": [
+                {
+                    "extension": "mp3",
+                    "codec": "audio/mpeg"
+                },
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                }
+            ],
+            "categories": [
+                "Simpsons"
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
