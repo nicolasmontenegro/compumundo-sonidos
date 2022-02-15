@@ -63,7 +63,7 @@ export default {
    ** RealFaviconGenerator Favicon's for NUXT
    */
   'rfg-icon': {
-    force: true,
+    force: false,
     static: true,
     staticPath: '/_favicons/',
     masterPicture: 'static/icon.png',

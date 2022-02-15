@@ -64,21 +64,21 @@ fs.readdir(directoryPath, function (err, files) {
       db.sounds[soundIndex].files.push({
         extension,
         codec: mime.lookup(extension),
-        ...(getMaxVolume != null
-          ? { maxVolumeDb: getMaxVolume(`${directoryPath}/${file}`) }
-          : null),
+        // ...(getMaxVolume != null
+        //   ? { maxVolumeDb: getMaxVolume(`${directoryPath}/${file}`) }
+        //   : null),
       })
     }
 
-    if (getMaxVolume && !db.sounds[soundIndex].maxVolumeDb) {
-      // eslint-disable-next-line no-console
-      // console.log(`${directoryPath}/${file}`);
-      const maxVolumeDb = getMaxVolume(`${directoryPath}/${file}`)
-      if (maxVolumeDb != null)
-        db.sounds[soundIndex].maxVolumeDb = getMaxVolume(
-          `${directoryPath}/${file}`
-        )
-    }
+    // if (getMaxVolume && !db.sounds[soundIndex].maxVolumeDb) {
+    //   // eslint-disable-next-line no-console
+    //   // console.log(`${directoryPath}/${file}`);
+    //   const maxVolumeDb = getMaxVolume(`${directoryPath}/${file}`)
+    //   if (maxVolumeDb != null)
+    //     db.sounds[soundIndex].maxVolumeDb = getMaxVolume(
+    //       `${directoryPath}/${file}`
+    //     )
+    // }
   })
 
   const data = JSON.stringify(db, null, 4)
