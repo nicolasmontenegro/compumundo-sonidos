@@ -1,6 +1,5 @@
 <template lang="pug">
 .layout
-  script(src="stars.js")
   template(v-if="bgStyle === 'stars'")
     canvas.bg-special#canvas
   template(v-if="bgStyle === 'tebi'")
@@ -32,20 +31,37 @@
 
 <script>
 import { mapState } from 'vuex'
-
-prototype.initStarAnimation = window.initAnimation;
+import Stars from '~/assets/stars.js'
 
 export default {
   name: 'DefaultLayout',
+  data() {
+    return {
+      stars: null,
+    }
+  },
   computed: {
     ...mapState('settings', ['bgStyle']),
   },
   watch: {
-    bgStyle(newValue) {
-       if (newValue === 'stars')
-        this.initStarAnimation();
-    }
-  }
+    bgStyle() {
+      this.manageStars()
+    },
+  },
+  mounted() {
+    this.manageStars()
+  },
+  methods: {
+    manageStars() {
+      if (this.bgStyle === 'stars') {
+        setTimeout(() => {
+          this.stars = new Stars(this.$el.querySelector('#canvas'))
+        }, 50)
+      } else {
+        delete this.stars
+      }
+    },
+  },
 }
 </script>
 
@@ -65,7 +81,7 @@ html
     .title
       color: $white
 
-  .bg-special 
+  .bg-special
     position: fixed
     height: 100vh
     width: 100vw
@@ -79,9 +95,9 @@ html
       display: none
 
   #tebi
-    background: url('bg//baby.gif') repeat
+    background: url('/bg/baby.gif') repeat
   #stars
-    background: url('bg//stars.gif') repeat
+    background: url('/bg/stars.gif') repeat
   #telowide
     position: fixed
     height: 100vh
