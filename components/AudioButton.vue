@@ -137,7 +137,7 @@ export default {
       if (this.gainAudio.audioContext) {
         this.gainAudio.audioContext.resume()
         this.gainAudio.gainNode = this.gainAudio.audioContext.createGain()
-        this.gainAudio.gainNode.gain.value = 10 ^ (this.maxVolumeDb / 20)
+        this.gainAudio.gainNode.gain.value = Math.pow(10, ((this.maxVolumeDb * -1) / 20))
 
         this.gainAudio.sourceNode =
           this.gainAudio.audioContext.createMediaElementSource(this.nodeAudio)
