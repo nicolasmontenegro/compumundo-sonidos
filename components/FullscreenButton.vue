@@ -5,13 +5,12 @@
     span.is-hidden-desktop Pantalla completa
 </template>
 
-
 <script>
 export default {
   name: 'FullscreenButton',
   data() {
     return {
-      isFullscreen: false
+      isFullscreen: false,
     }
   },
   mounted() {
@@ -21,8 +20,10 @@ export default {
   },
   methods: {
     toggleFullscreen() {
-      this.isFullscreen ? document.exitFullscreen() : document.documentElement.requestFullscreen()
-    }
-  }
+      this.isFullscreen
+        ? document.exitFullscreen()
+        : document.documentElement.requestFullscreen()
+    },
+  },
 }
 </script>

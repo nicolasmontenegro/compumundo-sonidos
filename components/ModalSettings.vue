@@ -55,7 +55,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import exportedVars from '~/assets/sass/export.sass' 
+import exportedVars from '~/assets/sass/export.sass'
 
 export default {
   name: 'ModalSettings',
@@ -197,7 +197,7 @@ export default {
       white-space: break-spaces
 
   .b-tabs
-    .tabs ul 
+    .tabs ul
       &::after
         @include from($desktop)
           content: ""

@@ -4,7 +4,7 @@ export const state = () => ({
   categoriesList: [],
   categoriesSelected: [],
   categoriesQuery: '',
-  filteredDBCount: 0
+  filteredDBCount: 0,
 })
 
 export const mutations = {

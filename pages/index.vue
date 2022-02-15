@@ -26,7 +26,11 @@ export default {
   },
   computed: {
     ...mapState('settings', ['isWide']),
-    ...mapState('filter', ['searchQuery', 'categoriesSelected', 'categoriesQuery']),
+    ...mapState('filter', [
+      'searchQuery',
+      'categoriesSelected',
+      'categoriesQuery',
+    ]),
   },
   watch: {
     categoriesSelected: {

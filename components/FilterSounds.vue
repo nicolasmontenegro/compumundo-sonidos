@@ -50,13 +50,18 @@ export default {
         return this.$store.commit('filter/setSearchQuery', newValue)
       },
     },
-    ...mapState('filter', ['isOpen', 'categoriesList', 'categoriesQuery', 'filteredDBCount']),
-    ...mapGetters({categoriesFiltered: 'filter/categoriesFiltered'}),
+    ...mapState('filter', [
+      'isOpen',
+      'categoriesList',
+      'categoriesQuery',
+      'filteredDBCount',
+    ]),
+    ...mapGetters({ categoriesFiltered: 'filter/categoriesFiltered' }),
   },
   methods: {
     setCategoriesQuery(text) {
       this.$store.commit('filter/setCategoriesQuery', text)
     },
-  }
+  },
 }
 </script>

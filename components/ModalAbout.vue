@@ -32,9 +32,9 @@ export default {
   name: 'ModalAbout',
   data() {
     return {
-      isModalActive: false
+      isModalActive: false,
     }
-  }
+  },
 }
 </script>
 

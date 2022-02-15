@@ -5,7 +5,6 @@
     span.is-hidden-desktop Filtro
 </template>
 
-
 <script>
 import { mapState } from 'vuex'
 
@@ -17,7 +16,7 @@ export default {
   methods: {
     toggleFilter() {
       this.$store.commit('filter/toggleIsOpen')
-    }
-  }
+    },
+  },
 }
 </script>

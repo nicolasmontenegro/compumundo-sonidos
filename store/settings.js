@@ -5,7 +5,7 @@ export const state = () => ({
   isWide: false,
   clickRepeatSound: false,
   clickStopOtherSound: false,
-  clickOutsideStop: false
+  clickOutsideStop: false,
 })
 
 export const mutations = {
@@ -26,8 +26,7 @@ export const mutations = {
   },
   setClickStopOtherSound(state, value) {
     state.clickStopOtherSound = value
-    if (!value)
-      state.clickOutsideStop = false
+    if (!value) state.clickOutsideStop = false
   },
   setClickOutsideStop(state, value) {
     state.clickOutsideStop = value

@@ -18,9 +18,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-    '~/assets/sass/export.sass'
-  ],
+  css: ['~/assets/sass/export.sass'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [{ src: '~/plugins/persistedState.client.js' }],
@@ -43,7 +41,7 @@ export default {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     // https://github.com/pimlie/nuxt-rfg-icon
-    'nuxt-rfg-icon'
+    'nuxt-rfg-icon',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -62,13 +60,13 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
   /*
-  ** RealFaviconGenerator Favicon's for NUXT
-  */
+   ** RealFaviconGenerator Favicon's for NUXT
+   */
   'rfg-icon': {
     force: true,
     static: true,
     staticPath: '/_favicons/',
     masterPicture: 'static/icon.png',
-    rfg: require('./assets/faviconDescription.json')
+    rfg: require('./assets/faviconDescription.json'),
   },
 }
