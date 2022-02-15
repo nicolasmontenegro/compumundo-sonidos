@@ -42,24 +42,13 @@ export default {
       default() {
         return []
       },
-    },
-    maxVolumeDb: {
-      type: Number,
-      required: false,
-      default: null,
-    },
+    }
   },
   data() {
     return {
       nodeAudio: null,
       isPlaying: false,
       fill: { gradient: ['red', 'green', 'blue'] },
-      gainAudio: {
-        isSet: false,
-        audioContext: null,
-        sourceNode: null,
-        gainNode: null,
-      },
     }
   },
   computed: {
@@ -91,7 +80,6 @@ export default {
     }
 
     this.setOutputDevice()
-    this.createAudioContext()
 
     this.popupItem = this.$el
   },
@@ -104,8 +92,6 @@ export default {
       }
     },
     playAudio() {
-      if (!this.gainAudio.isSet) this.setGain()
-
       this.nodeAudio.play()
       if (this.clickStopOtherSound)
         this.$nuxt.$emit('clickStopOtherSoundEvent', this)
@@ -124,29 +110,7 @@ export default {
     },
     clickOutside() {
       if (this.clickOutsideStop) this.stopAudio(true)
-    },
-    createAudioContext() {
-      if (this.maxVolumeDb)
-        this.gainAudio.audioContext = new (window.AudioContext ||
-          window.webkitAudioContext)()
-
-      if (!this.maxVolumeDb || !this.gainAudio.audioContext)
-        this.gainAudio.isSet = true
-    },
-    setGain() {
-      if (this.gainAudio.audioContext) {
-        this.gainAudio.audioContext.resume()
-        this.gainAudio.gainNode = this.gainAudio.audioContext.createGain()
-        this.gainAudio.gainNode.gain.value = Math.pow(10, ((this.maxVolumeDb * -1) / 20))
-
-        this.gainAudio.sourceNode =
-          this.gainAudio.audioContext.createMediaElementSource(this.nodeAudio)
-        this.gainAudio.sourceNode
-          .connect(this.gainAudio.gainNode)
-          .connect(this.gainAudio.audioContext.destination)
-        this.gainAudio.isSet = true
-      }
-    },
+    }
   },
 }
 </script>
