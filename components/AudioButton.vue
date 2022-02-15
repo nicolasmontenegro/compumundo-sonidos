@@ -10,7 +10,7 @@
   p.is-family-monospace.has-text-centered.title.is-6.is-dark.my-2 {{ title }}
   b-taglist(v-if="categories")
     b-tag(type="is-info" v-for="category in categories" :key="`${title}-${category}`") {{ category }} 
-  audio
+  audio(:autoplay="false" preload="none")
     source(v-for="file in files" :src="`/sounds/${filename}.${file.extension}`" :type="`${file.codec}`" :key="`${filename}.${file.extension}`")
     | ERROR
 </template>
@@ -22,7 +22,7 @@ import ClickOutside from 'vue-click-outside'
 export default {
   name: 'AudioButton',
   directives: {
-    ClickOutside
+    ClickOutside,
   },
   props: {
     title: {
@@ -43,16 +43,33 @@ export default {
         return []
       },
     },
+    maxVolumeDb: {
+      type: Number,
+      required: false,
+      default: null,
+    },
   },
   data() {
     return {
       nodeAudio: null,
       isPlaying: false,
       fill: { gradient: ['red', 'green', 'blue'] },
+      gainAudio: {
+        isSet: false,
+        audioContext: null,
+        sourceNode: null,
+        gainNode: null,
+      },
     }
   },
   computed: {
-    ...mapState('settings', ['buttonType', 'selectedDevice', 'clickRepeatSound', 'clickStopOtherSound', 'clickOutsideStop']),
+    ...mapState('settings', [
+      'buttonType',
+      'selectedDevice',
+      'clickRepeatSound',
+      'clickStopOtherSound',
+      'clickOutsideStop',
+    ]),
   },
   watch: {
     selectedDevice() {
@@ -60,12 +77,9 @@ export default {
     },
   },
   created() {
-    this.$nuxt.$on(
-      'clickStopOtherSoundEvent', 
-      (component) => {
-        if (component !== this)
-          this.stopAudio(true)
-      })
+    this.$nuxt.$on('clickStopOtherSoundEvent', (component) => {
+      if (component !== this) this.stopAudio(true)
+    })
   },
   mounted() {
     this.nodeAudio = this.$el.querySelector('audio')
@@ -75,7 +89,9 @@ export default {
     this.nodeAudio.onended = () => {
       this.isPlaying = false
     }
+
     this.setOutputDevice()
+    this.createAudioContext()
 
     this.popupItem = this.$el
   },
@@ -88,11 +104,13 @@ export default {
       }
     },
     playAudio() {
+      if (!this.gainAudio.isSet) this.setGain()
+
       this.nodeAudio.play()
       if (this.clickStopOtherSound)
         this.$nuxt.$emit('clickStopOtherSoundEvent', this)
     },
-    stopAudio(force=false) {
+    stopAudio(force = false) {
       this.nodeAudio.currentTime = 0
       if (!this.clickRepeatSound || force) {
         this.nodeAudio.pause()
@@ -105,10 +123,31 @@ export default {
       } catch (e) {}
     },
     clickOutside() {
-      if (this.clickOutsideStop)
-        this.stopAudio(true)
-    }
-  }
+      if (this.clickOutsideStop) this.stopAudio(true)
+    },
+    createAudioContext() {
+      if (this.maxVolumeDb)
+        this.gainAudio.audioContext = new (window.AudioContext ||
+          window.webkitAudioContext)()
+
+      if (!this.maxVolumeDb || !this.gainAudio.audioContext)
+        this.gainAudio.isSet = true
+    },
+    setGain() {
+      if (this.gainAudio.audioContext) {
+        this.gainAudio.audioContext.resume()
+        this.gainAudio.gainNode = this.gainAudio.audioContext.createGain()
+        this.gainAudio.gainNode.gain.value = 10 ^ (this.maxVolumeDb / 20)
+
+        this.gainAudio.sourceNode =
+          this.gainAudio.audioContext.createMediaElementSource(this.nodeAudio)
+        this.gainAudio.sourceNode
+          .connect(this.gainAudio.gainNode)
+          .connect(this.gainAudio.audioContext.destination)
+        this.gainAudio.isSet = true
+      }
+    },
+  },
 }
 </script>
 
