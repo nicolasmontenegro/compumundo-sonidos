@@ -15,9 +15,12 @@
             b-field(label='Estilo de fondo')
               b-select(v-model='bgStyle')
                 option(v-for='option in bgStyles' :value='option.value' :label="option.label" :key='option.value')
-            b-field(label='Estilo de botonera')
+            b-field(label='Estilo de botones')
               b-select(v-model='buttonType' )
                 option(v-for='option in buttonTypes' :value='option.value' :label="option.label" :key='option.value')
+            b-field(label='Estilo de lista de botones')
+              b-select(v-model='listButtonType' )
+                option(v-for='option in listButtonTypes' :value='option.value' :label="option.label" :key='option.value')
             b-field(label='Espacio de botonera')
               b-checkbox(v-model="isWide") La botonera ocupa todo el ancho disponible
           b-tab-item(label="Comportamiento" icon="gesture-tap-button")
@@ -95,6 +98,14 @@ export default {
         return this.$store.commit('settings/setButtonType', newValue)
       },
     },
+    listButtonType: {
+      get() {
+        return this.$store.state.settings.listButtonType
+      },
+      set(newValue) {
+        return this.$store.commit('settings/setListButtonType', newValue)
+      },
+    },
     selectedDevice: {
       get() {
         return this.$store.state.settings.selectedDevice
@@ -145,6 +156,7 @@ export default {
     },
     ...mapGetters({
       buttonTypes: 'settings/buttonTypes',
+      listButtonTypes: 'settings/listButtonTypes',
       bgStyles: 'settings/bgStyles',
     }),
   },

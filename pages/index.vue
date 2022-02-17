@@ -1,12 +1,7 @@
 <template lang="pug">
   section.pt-3
     FilterSounds
-    .list-buttons.pt-6(:class="{'container': !isWide}")
-      .columns.is-flex-wrap-wrap.is-mobile
-        .column.item-sound(
-          v-for="sound in filteredDB" 
-          :class="{'is-visible': sound.visible, 'is-6-mobile is-4-tablet is-2-desktop': !isWide, 'is-6-mobile is-2-tablet is-2-desktop is-1-widescreen': isWide}")
-          AudioButton(v-bind="sound")
+    ListButtons(:sounds="filteredDB")
 </template>
 
 <script>
@@ -25,7 +20,6 @@ export default {
     }
   },
   computed: {
-    ...mapState('settings', ['isWide']),
     ...mapState('filter', [
       'searchQuery',
       'categoriesSelected',
@@ -65,12 +59,3 @@ export default {
   },
 }
 </script>
-
-<style lang="sass" scoped>
-.list-buttons
-  position: relative
-
-  .item-sound
-    &:not(.is-visible)
-      display: none
-</style>

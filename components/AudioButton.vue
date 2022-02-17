@@ -1,15 +1,21 @@
 <template lang="pug">
-.sound-button.is-flex.is-flex-direction-column.is-justify-items-center.is-align-items-center(v-click-outside="clickOutside")
+.sound-button.is-flex(v-click-outside="clickOutside" :class="buttonFlexStyle")
   template(v-if="buttonType === 'modern'")
-    b-button(rounded size="is-large" type="is-primary " @click="togglePlayAudio" :class="{'is-light': isPlaying}") 
-      b-icon(icon="volume-high")
+    b-button(
+        rounded
+        :size="templateType === 'list' ? 'is-small' : 'is-large'"
+        type="is-primary"
+        @click="togglePlayAudio"
+        :class="{'is-light': isPlaying, 'is-small': (templateType === 'list'), 'is-large': (templateType != 'list')}") 
+      b-icon(icon="volume-high" :customSize="templateType === 'list' ? 'mdi-8px' : 'mdi-24px'")
   template(v-if="buttonType === 'classic'")
-    .button-classic
+    .button-classic(:class="{'is-small': (templateType === 'list'), 'is-large': (templateType != 'list')}") 
       img(v-if="!isPlaying" src="~assets/transparent_button_normal.png" @click="togglePlayAudio" )
       img(v-else src="~assets/transparent_button_pressed.png" @click="togglePlayAudio")
-  p.is-family-monospace.has-text-centered.title.is-6.is-dark.my-2 {{ title }}
-  b-taglist(v-if="categories")
-    b-tag(type="is-info" v-for="category in categories" :key="`${title}-${category}`") {{ category }} 
+  p.is-family-monospace.title.is-6.is-dark(:class="buttonTextStyle" @click="(e) => (templateType === 'list' ? togglePlayAudio() : null ) ")
+    | {{ title }}
+  b-taglist.is-justify-content-center.m-0(v-if="categories")
+    b-tag.m-0.ml-2(type="is-info" v-for="category in categories" :key="`${title}-${category}`") {{ category }} 
   audio(:autoplay="false" preload="none")
     source(v-for="file in files" :src="`/sounds/${filename}.${file.extension}`" :type="`${file.codec}`" :key="`${filename}.${file.extension}`")
     | ERROR
@@ -42,7 +48,11 @@ export default {
       default() {
         return []
       },
-    }
+    },
+    templateType: {
+      type: String,
+      required: true,
+    },
   },
   data() {
     return {
@@ -59,6 +69,18 @@ export default {
       'clickStopOtherSound',
       'clickOutsideStop',
     ]),
+    buttonFlexStyle() {
+      if (this.templateType === "list") 
+        return "is-flex-direction-row is-align-items-center;"
+      else 
+        return "is-flex-direction-column is-justify-items-center is-align-items-center my-2"
+    },
+    buttonTextStyle() {
+      if (this.templateType === "list") 
+        return "has-text-left is-clickable is-flex-grow-1 px-3 py-2 m-0"
+      else 
+        return "has-text-centered my-2"
+    }
   },
   watch: {
     selectedDevice() {
@@ -121,21 +143,26 @@ export default {
 .sound-button ::v-deep
   button
     transition: all 300ms ease-in-out
-    height: 4rem
-    width: 4rem
-  .title
-    color: $white
-  .tag
-    font-size: .625rem
-  .button-classic
-    height: 4rem
-    width: 4rem
 
     img
       background-color: $blue
       border-radius: 50%
       width: auto
       height: 100%
+
+  button, .button-classic
+    &.is-large
+      height: 4rem
+      width: 4rem
+    &.is-small
+      height: 2rem
+      width: 2rem
+
+  .title
+    color: $white
+
+  .tag
+    font-size: .625rem
 
   .fade-enter-active, .fade-leave-active
     transition: opacity .5s
