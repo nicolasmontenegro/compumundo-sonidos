@@ -1,6 +1,7 @@
 export const state = () => ({
   buttonType: 'modern',
   listButtonType: 'icons',
+  listColumns: 1,
   selectedDevice: 'default',
   bgStyle: 'stars',
   isWide: false,
@@ -15,6 +16,9 @@ export const mutations = {
   },
   setListButtonType(state, value) {
     state.listButtonType = value
+  },
+  setListColumns(state, value) {
+    state.listColumns = value
   },
   setSelectedDevice(state, value) {
     state.selectedDevice = value

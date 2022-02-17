@@ -21,6 +21,9 @@
             b-field(label='Estilo de lista de botones')
               b-select(v-model='listButtonType' )
                 option(v-for='option in listButtonTypes' :value='option.value' :label="option.label" :key='option.value')
+            template(v-if="listButtonType === 'list'")
+              b-field(label='Cantidad de columnas para la lista')
+                b-numberinput(v-model="listColumns" controls-position="compact" :min="1" :max="4")
             b-field(label='Espacio de botonera')
               b-checkbox(v-model="isWide") La botonera ocupa todo el ancho disponible
           b-tab-item(label="Comportamiento" icon="gesture-tap-button")
@@ -104,6 +107,14 @@ export default {
       },
       set(newValue) {
         return this.$store.commit('settings/setListButtonType', newValue)
+      },
+    },
+    listColumns: {
+      get() {
+        return this.$store.state.settings.listColumns
+      },
+      set(newValue) {
+        return this.$store.commit('settings/setListColumns', newValue)
       },
     },
     selectedDevice: {
