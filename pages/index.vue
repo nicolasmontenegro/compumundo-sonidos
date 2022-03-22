@@ -1,18 +1,18 @@
 <template lang="pug">
   section.pt-3
     FilterSounds
-    ListButtons(:sounds="filteredDB")
+    ListButtons(:sounds="soundsFiltered")
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 
 export default {
   name: 'IndexPage',
   async asyncData({ params, $axios, store }) {
     const dbJson = await $axios.$get(`/db.json`)
     store.commit('filter/setCategoriesList', dbJson.categories)
-    return { dbJson }
+    store.commit('sounds/setSounds', dbJson.sounds)
   },
   data() {
     return {
@@ -25,37 +25,20 @@ export default {
       'categoriesSelected',
       'categoriesQuery',
     ]),
+    ...mapState('sounds', ['soundsFiltered']),
   },
   watch: {
     categoriesSelected: {
       immediate: true,
-      handler: 'updateFilteredDB',
+      handler: 'applyFilter',
     },
     searchQuery: {
       immediate: true,
-      handler: 'updateFilteredDB',
+      handler: 'applyFilter',
     },
   },
   methods: {
-    updateFilteredDB() {
-      let filteredDBCount = 0
-
-      this.filteredDB = this.dbJson.sounds.map((sound) => {
-        sound.visible =
-          sound.title.toLowerCase().includes(this.searchQuery.toLowerCase()) &&
-          (this.categoriesSelected.length
-            ? sound.categories
-              ? sound.categories.some((category) =>
-                  this.categoriesSelected.includes(category)
-                )
-              : false
-            : true)
-        if (sound.visible) filteredDBCount += 1
-        return sound
-      })
-
-      return this.$store.commit('filter/setFilteredDBCount', filteredDBCount)
-    },
+    ...mapActions('sounds', ['applyFilter']),
   },
 }
 </script>

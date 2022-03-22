@@ -70,17 +70,16 @@ export default {
       'clickOutsideStop',
     ]),
     buttonFlexStyle() {
-      if (this.templateType === "list") 
-        return "is-flex-direction-row is-align-items-center;"
-      else 
-        return "is-flex-direction-column is-justify-items-center is-align-items-center my-2"
+      if (this.templateType === 'list')
+        return 'is-flex-direction-row is-align-items-center;'
+      else
+        return 'is-flex-direction-column is-justify-items-center is-align-items-center my-2'
     },
     buttonTextStyle() {
-      if (this.templateType === "list") 
-        return "has-text-left is-clickable is-flex-grow-1 px-3 py-2 m-0"
-      else 
-        return "has-text-centered my-2"
-    }
+      if (this.templateType === 'list')
+        return 'has-text-left is-clickable is-flex-grow-1 px-3 py-2 m-0'
+      else return 'has-text-centered my-2'
+    },
   },
   watch: {
     selectedDevice() {
@@ -132,7 +131,7 @@ export default {
     },
     clickOutside() {
       if (this.clickOutsideStop) this.stopAudio(true)
-    }
+    },
   },
 }
 </script>

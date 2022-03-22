@@ -21,14 +21,15 @@ export default {
   computed: {
     ...mapState('settings', ['isWide', 'listButtonType', 'listColumns']),
     columsList() {
-      if (this.listButtonType === "list")
-        return `is-12-mobile is-${12 / this.listColumns}-tablet is-${12 / this.listColumns}-desktop is-list`
+      if (this.listButtonType === 'list')
+        return `is-12-mobile is-${12 / this.listColumns}-tablet is-${
+          12 / this.listColumns
+        }-desktop is-list`
       else if (this.isWide)
-          return 'is-6-mobile is-2-tablet is-2-desktop is-1-widescreen'
-      else 
-        return 'is-6-mobile is-4-tablet is-2-desktop'
-    }
-  }
+        return 'is-6-mobile is-2-tablet is-2-desktop is-1-widescreen'
+      else return 'is-6-mobile is-4-tablet is-2-desktop'
+    },
+  },
 }
 </script>
 
