@@ -7,12 +7,24 @@ export const state = () => ({
 export const mutations = {
   setSounds(state, value) {
     state.sounds = value
+    if (state.soundsOrder.length < state.sounds.length) {
+      const amountBase = state.soundsOrder.length
+      state.soundsOrder = [...Array(state.sounds.length - state.soundsOrder.length).keys()].map(i => i + amountBase)
+    }
   },
   setSoundsFiltered(state, value) {
     state.soundsFiltered = value
   },
+  setSoundsOrder(state, value) {
+    state.soundsOrder = value
+  },
 }
 
+export const getters = {
+  getSoundsSorted(state) {
+    return state.soundsOrder.map(i => ({originalPosition: i, ...state.soundsFiltered[i]}))
+  }
+}
 
 export const actions = {
   applyFilter({ state, dispatch, commit, getters, rootState, rootGetters }) {

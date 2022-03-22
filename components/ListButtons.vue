@@ -1,25 +1,21 @@
 <template lang="pug">
 .list-buttons.pt-6(:class="{'container': !isWide}")
-  .columns.is-flex-wrap-wrap.is-mobile
+  VueDraggable.columns.is-flex-wrap-wrap.is-mobile(v-model='soundsOrder')
     .column.item-sound(
-      v-for="sound in sounds" 
-      :class="`${columsList} ${sound.visible ? 'is-visible' : ''}`")
+      v-for="sound in soundsOrder" 
+      :class="`${columsList} ${sound.visible ? 'is-visible' : ''}`"
+      :key="`sound-${sound.originalPosition}`")
       AudioButton(v-bind="sound" :templateType="listButtonType")
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapGetters } from 'vuex'
 
 export default {
   name: 'ListButtons',
-  props: {
-    sounds: {
-      type: Array,
-      required: true,
-    },
-  },
   computed: {
     ...mapState('settings', ['isWide', 'listButtonType', 'listColumns']),
+    ...mapGetters('sounds', ['getSoundsSorted']),
     columsList() {
       if (this.listButtonType === 'list')
         return `is-12-mobile is-${12 / this.listColumns}-tablet is-${
@@ -29,6 +25,16 @@ export default {
         return 'is-6-mobile is-2-tablet is-2-desktop is-1-widescreen'
       else return 'is-6-mobile is-4-tablet is-2-desktop'
     },
+    soundsOrder: {
+      get() {
+        return this.getSoundsSorted
+      },
+      set(newValue) {
+        return this.$store.commit(
+          'sounds/setSoundsOrder',
+          newValue.map(position => position.originalPosition))
+      },
+    }
   },
 }
 </script>

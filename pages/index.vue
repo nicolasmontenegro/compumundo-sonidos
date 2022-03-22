@@ -1,7 +1,7 @@
 <template lang="pug">
   section.pt-3
     FilterSounds
-    ListButtons(:sounds="soundsFiltered")
+    ListButtons
 </template>
 
 <script>
@@ -23,9 +23,7 @@ export default {
     ...mapState('filter', [
       'searchQuery',
       'categoriesSelected',
-      'categoriesQuery',
     ]),
-    ...mapState('sounds', ['soundsFiltered']),
   },
   watch: {
     categoriesSelected: {
