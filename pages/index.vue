@@ -10,9 +10,10 @@ import { mapState, mapActions } from 'vuex'
 export default {
   name: 'IndexPage',
   async asyncData({ params, $axios, store }) {
-    const dbJson = await $axios.$get(`/db.json`)
+    const dbJson = await $axios.$get(`/db.json?cb=${Date.now()}`)
     store.commit('filter/setCategoriesList', dbJson.categories)
     store.commit('sounds/setSounds', dbJson.sounds)
+    store.dispatch('sounds/updateSoundsOrder')
   },
   data() {
     return {

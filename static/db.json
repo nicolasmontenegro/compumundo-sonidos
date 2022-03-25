@@ -14,7 +14,8 @@
         "Idkzx",
         "ChocoChips",
         "TeLoDoyVuelta",
-        "Videojuegos"
+        "Videojuegos",
+        "PichonDesu"
     ],
     "sounds": [
         {
@@ -1515,6 +1516,339 @@
             ],
             "categories": [
                 "Simpsons"
+            ]
+        },
+        {
+            "title": "PichonDesu: idkzx",
+            "filename": "PichonDesu  - idkzx",
+            "files": [
+                {
+                    "extension": "mp3",
+                    "codec": "audio/mpeg"
+                },
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                }
+            ],
+            "categories": [
+                "PichonDesu"
+            ]
+        },
+        {
+            "title": "Ahora no... estoy muy ebria",
+            "filename": "ahora no estoy muy ebria",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "Simpsons"
+            ]
+        },
+        {
+            "title": "Burns: ¡¿Cómo puede ser tan irresponsable?!",
+            "filename": "burns como puede ser tan irreponsable",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "Simpsons"
+            ]
+        },
+        {
+            "title": "Esa me la comi gratis",
+            "filename": "coin esa me la comi gratis",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "CaReCoiN"
+            ]
+        },
+        {
+            "title": "¡Sale voh de aquí!",
+            "filename": "coin sale voh de aqui",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "CaReCoiN"
+            ]
+        },
+        {
+            "title": "Homero: es mi primer día",
+            "filename": "homero es mi primer dia",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "Simpsons"
+            ]
+        },
+        {
+            "title": "Homero: Is my first day",
+            "filename": "homero is my first day",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "Simpsons"
+            ]
+        },
+        {
+            "title": "Homero: Para mas placer",
+            "filename": "homero para mas placer",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "Simpsons"
+            ]
+        },
+        {
+            "title": "¡La caja! ¡La caja!",
+            "filename": "la caja",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "Simpsons"
+            ]
+        },
+        {
+            "title": "Marge: No deberia decirlo...",
+            "filename": "marge no deberia decirlo",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "Simpsons"
+            ]
+        },
+        {
+            "title": "Dr. Nick: ¡Adios todo el mundo!",
+            "filename": "nick adios todo el mundo",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "Simpsons"
+            ]
+        },
+        {
+            "title": "¡No me veas!",
+            "filename": "no me veas",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "Simpsons"
+            ]
+        },
+        {
+            "title": "Mira la mierda...",
+            "filename": "telo mira la mierda",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "TeLoDoyVuelta"
+            ]
+        },
+        {
+            "title": "Comecocos de Atari",
+            "filename": "comecocos de atari - Copy",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "TV"
+            ]
+        },
+        {
+            "title": "Burns: Todo está saliendo muy bien",
+            "filename": "burns todo está saliendo muy bien",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "Simpsons"
+            ]
+        },
+        {
+            "title": "Idkzx: Le faltó gato",
+            "filename": "idkzx le falto gato",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "Idkzx"
+            ]
+        },
+        {
+            "title": "Cat",
+            "filename": "cat",
+            "files": [
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ]
+        },
+        {
+            "title": "En cuanto a la demanda...",
+            "filename": "en-cuanto-a-la-demanda",
+            "files": [
+                {
+                    "extension": "mp3",
+                    "codec": "audio/mpeg"
+                },
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                }
+            ],
+            "categories": [
+                "TV"
+            ]
+        },
+        {
+            "title": "¡Haga una hoguera!",
+            "filename": "haga-una-hoguera",
+            "files": [
+                {
+                    "extension": "mp3",
+                    "codec": "audio/mpeg"
+                },
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                }
+            ],
+            "categories": [
+                "Yrion"
+            ]
+        },
+        {
+            "title": "No diga eso",
+            "filename": "no-diga-eso",
+            "files": [
+                {
+                    "extension": "mp3",
+                    "codec": "audio/mpeg"
+                },
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                }
+            ],
+            "categories": [
+                "TV"
             ]
         }
     ]

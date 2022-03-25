@@ -1,5 +1,11 @@
 import createPersistedState from 'vuex-persistedstate'
 
 export default ({ store }) => {
-  createPersistedState()(store)
+  createPersistedState({
+    paths: [
+      'filter',
+      'settings',
+      'sounds.soundsOrder'
+    ]
+  })(store)
 }

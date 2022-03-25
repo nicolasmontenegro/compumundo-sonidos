@@ -1,6 +1,6 @@
 <template lang="pug">
 .list-buttons.pt-6(:class="{'container': !isWide}")
-  VueDraggable.columns.is-flex-wrap-wrap.is-mobile(v-model='soundsOrder')
+  VueDraggable.columns.is-flex-wrap-wrap.is-mobile(v-model='soundsOrder' :sort="canDragSounds")
     .column.item-sound(
       v-for="sound in soundsOrder" 
       :class="`${columsList} ${sound.visible ? 'is-visible' : ''}`"
@@ -14,7 +14,8 @@ import { mapState, mapGetters } from 'vuex'
 export default {
   name: 'ListButtons',
   computed: {
-    ...mapState('settings', ['isWide', 'listButtonType', 'listColumns']),
+    ...mapState('settings', ['isWide', 'listButtonType', 'listColumns', 'canDragSounds']),
+    ...mapState('sounds', ['canDragSounds']),
     ...mapGetters('sounds', ['getSoundsSorted']),
     columsList() {
       if (this.listButtonType === 'list')

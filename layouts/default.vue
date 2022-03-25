@@ -15,6 +15,8 @@
         p.title.is-5 Gran Botonera CompuMundo
     template(#end)
       b-navbar-item(tag="div")
+        ToggleDrag
+      b-navbar-item(tag="div")
         FilterButton
       b-navbar-item(tag="div")
         FullscreenButton

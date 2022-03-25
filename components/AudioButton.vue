@@ -142,8 +142,10 @@ export default {
 .sound-button ::v-deep
   button
     transition: all 300ms ease-in-out
-
+    
+  .button-classic
     img
+      cursor: pointer
       background-color: $blue
       border-radius: 50%
       width: auto
