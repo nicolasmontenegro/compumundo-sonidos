@@ -1797,6 +1797,10 @@
                 {
                     "extension": "wav",
                     "codec": "audio/wave"
+                },
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
                 }
             ]
         },
@@ -1849,6 +1853,57 @@
             ],
             "categories": [
                 "TV"
+            ]
+        },
+        {
+            "title": "Paga tu patente...",
+            "filename": "paga tu patente",
+            "files": [
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                },
+                {
+                    "extension": "wav",
+                    "codec": "audio/wave"
+                }
+            ],
+            "categories": [
+                "TV"
+            ]
+        },
+        {
+            "title": "No nos dejes a medio camino",
+            "filename": "no-nos-dejes",
+            "files": [
+                {
+                    "extension": "mp3",
+                    "codec": "audio/mpeg"
+                },
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                }
+            ],
+            "categories": [
+                "TV"
+            ]
+        },
+        {
+            "title": "Sale poh, vieja cu...",
+            "filename": "sale-poh-vieja",
+            "files": [
+                {
+                    "extension": "mp3",
+                    "codec": "audio/mpeg"
+                },
+                {
+                    "extension": "ogg",
+                    "codec": "audio/ogg"
+                }
+            ],
+            "categories": [
+                "TeLoDoyVuelta"
             ]
         }
     ]

@@ -1,6 +1,6 @@
 <template lang="pug">
 .list-buttons.pt-6(:class="{'container': !isWide}")
-  VueDraggable.columns.is-flex-wrap-wrap.is-mobile(v-model='soundsOrder' :sort="canDragSounds")
+  VueDraggable.columns.is-flex-wrap-wrap.is-mobile(v-model='soundsOrder' :disabled="!canDragSounds" handle=".sound-button-drag")
     .column.item-sound(
       v-for="sound in soundsOrder" 
       :class="`${columsList} ${sound.visible ? 'is-visible' : ''}`"
@@ -41,8 +41,14 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+@import "~bulma/sass/utilities/_all"
+
 .list-buttons
   position: relative
+
+  & > .columns
+    @media screen and (max-width: $tablet)
+      margin: 0
 
   .is-list
     position: relative

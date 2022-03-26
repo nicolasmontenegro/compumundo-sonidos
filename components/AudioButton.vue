@@ -14,8 +14,9 @@
       img(v-else src="~assets/transparent_button_pressed.png" @click="togglePlayAudio")
   p.is-family-monospace.title.is-6.is-dark(:class="buttonTextStyle" @click="(e) => (templateType === 'list' ? togglePlayAudio() : null ) ")
     | {{ title }}
-  b-taglist.is-justify-content-center.m-0(v-if="categories")
-    b-tag.m-0.ml-2(type="is-info" v-for="category in categories" :key="`${title}-${category}`") {{ category }} 
+  b-taglist.sound-button-tags.is-justify-content-center.m-0(v-if="categories")
+    b-tag.mt-0.mb-1(type="is-info" v-for="category in categories" :key="`${title}-${category}`") {{ category }} 
+  b-icon.sound-button-drag.m-0.px-1(v-if="canDragSounds" icon="drag" size="is-medium" :custom-class="templateType === 'list' ? '' : 'mdi-rotate-90'")
   audio(:autoplay="false" preload="none")
     source(v-for="file in files" :src="`/sounds/${filename}.${file.extension}`" :type="`${file.codec}`" :key="`${filename}.${file.extension}`")
     | ERROR
@@ -69,9 +70,10 @@ export default {
       'clickStopOtherSound',
       'clickOutsideStop',
     ]),
+    ...mapState('sounds', ['canDragSounds']),
     buttonFlexStyle() {
       if (this.templateType === 'list')
-        return 'is-flex-direction-row is-align-items-center;'
+        return 'is-flex-direction-row is-align-items-center'
       else
         return 'is-flex-direction-column is-justify-items-center is-align-items-center my-2'
     },

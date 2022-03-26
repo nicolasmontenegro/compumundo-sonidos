@@ -27,21 +27,21 @@
             b-field(label='Espacio de botonera')
               b-checkbox(v-model="isWide") La botonera ocupa todo el ancho disponible
           b-tab-item(label="Comportamiento" icon="gesture-tap-button")
-            b-field(label='Al hacer click nuevamente en un botón...')
+            b-field(grouped group-multiline label='Al hacer click nuevamente en un botón...')
               b-radio-button(v-model="clickRepeatSound" :native-value="false" type="is-primary is-light is-outlined")
                 b-icon(icon="stop")
                 span Detiene el audio
               b-radio-button(v-model="clickRepeatSound" :native-value="true" type="is-primary is-light is-outlined")
                 b-icon(icon="repeat")
                 span Reinicia el audio
-            b-field(label='Al hacer click en otro botón...')
+            b-field(grouped group-multiline label='Al hacer click en otro botón...')
               b-radio-button(v-model="clickStopOtherSound" :native-value="false" type="is-primary is-light is-outlined")
                 b-icon(icon="shuffle-disabled")
                 span Reproduce ambos audios simultaneamente
               b-radio-button(v-model="clickStopOtherSound" :native-value="true" type="is-primary is-light is-outlined")
                 b-icon(icon="call-merge" custom-class="mdi-rotate-90")
                 span Detiene el primer audio
-            b-field(label='Al hacer click fuera de botón ¿detiene el audio?')
+            b-field(grouped group-multiline label='Al hacer click fuera de botón ¿detiene el audio?')
               b-radio-button(v-model="clickOutsideStop" :native-value="false" type="is-primary is-light is-outlined" :disabled="!clickStopOtherSound")
                 b-icon(icon="close")
                 span No
@@ -236,4 +236,11 @@ export default {
 
     & > .tab-content
       min-height: 300px
+
+      .control
+        width: fit-content
+
+        .b-radio
+          height: auto
+
 </style>

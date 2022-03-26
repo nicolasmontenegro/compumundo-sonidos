@@ -82,6 +82,13 @@ html
   .navbar
     .title
       color: $white
+      overflow: hidden
+      white-space: nowrap
+
+    &-item
+      @media screen and (max-width: $tablet)
+        overflow-x: hidden
+        flex: 1
 
   .bg-special
     position: fixed
