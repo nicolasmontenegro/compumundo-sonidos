@@ -172,4 +172,8 @@ export default {
 
   .fade-enter, .fade-leave-to
     opacity: 0
+
+  .sound-button-drag:hover
+    cursor: grab
+
 </style>

@@ -73,6 +73,10 @@ export default {
 html
   background-color: $black
   overflow-y: auto !important
+
+body
+  max-width: 100vw
+  overflow-x: hidden
 </style>
 
 <style lang="sass" scoped>
