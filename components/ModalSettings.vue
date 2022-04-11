@@ -56,6 +56,15 @@
                 option(v-for='option in listDevices' :value='option.deviceId' :label="option.label" :key='option.deviceId' :mobile-modal="false")
             p(v-if="!isCompatible")
               i Tu navegador no es compatible con esta opción  
+          b-tab-item(label="Guardado" icon="content-save")
+            b-field(
+              label="Restaurar configuraciones"
+              message="Vuelve las configuraciones a su estado original. No Afecta a filtros ni orden de botones.")
+              b-button(label='Restaurar' type="is-primary"  @click="resetValuesSettings" icon-left="restart")
+            b-field(
+              label="Restaurar orden de los sonidos"
+              message="Vuelve los botones a su orden original.")
+              b-button(label='Restaurar' type="is-primary"  @click="resetSoundsOrder" icon-left="restart")
 
 </template>
 
@@ -205,6 +214,12 @@ export default {
         error.name
       )
     },
+    resetValuesSettings() {
+      this.$store.commit('settings/resetValues')
+    },
+    resetSoundsOrder() {
+      this.$store.dispatch('sounds/resetOrder')
+    }
   },
 }
 </script>

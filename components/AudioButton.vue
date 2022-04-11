@@ -14,8 +14,8 @@
       img(v-else src="~assets/transparent_button_pressed.png" @click="togglePlayAudio")
   p.is-family-monospace.title.is-6.is-dark(:class="buttonTextStyle" @click="(e) => (templateType === 'list' ? togglePlayAudio() : null ) ")
     | {{ title }}
-  b-taglist.sound-button-tags.is-justify-content-center.m-0(v-if="categories")
-    b-tag.mt-0.mb-1(type="is-info" v-for="category in categories" :key="`${title}-${category}`") {{ category }} 
+  b-taglist.sound-button-tags.m-0(v-if="categories" :class="templateType === 'list' ? 'is-justify-content-end' : 'is-justify-content-center'")
+    b-tag.mt-0.mb-1.mx-1(type="is-info" v-for="category in categories" :key="`${title}-${category}`") {{ category }} 
   b-icon.sound-button-drag.m-0.px-1(v-if="canDragSounds" icon="drag" size="is-medium" :custom-class="templateType === 'list' ? '' : 'mdi-rotate-90'")
   audio(:autoplay="false" preload="none")
     source(v-for="file in files" :src="`/sounds/${filename}.${file.extension}`" :type="`${file.codec}`" :key="`${filename}.${file.extension}`")
@@ -144,6 +144,9 @@ export default {
 .sound-button ::v-deep
   button
     transition: all 300ms ease-in-out
+
+  p, span
+    user-select: none
     
   .button-classic
     img

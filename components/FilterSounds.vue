@@ -14,7 +14,8 @@ b-collapse(animation="slide" v-model="isOpen")
               type="search"
               icon-right-clickable
               v-model="searchQuery"
-              @icon-right-click="searchQuery = ''")
+              @icon-right-click="searchQuery = ''"
+              :disabled="canDragSounds")
         .column.is-3
           b-field(label="Categorías")
             b-taginput.is-rounded(
@@ -25,7 +26,8 @@ b-collapse(animation="slide" v-model="isOpen")
               v-model="categoriesSelected"
               :data="categoriesFiltered"
               :ellipsis="true"
-              @typing="setCategoriesQuery") 
+              @typing="setCategoriesQuery"
+              :disabled="canDragSounds") 
 </template>
 
 <script>
@@ -57,6 +59,7 @@ export default {
       'filteredDBCount',
     ]),
     ...mapGetters({ categoriesFiltered: 'filter/categoriesFiltered' }),
+    ...mapState('sounds', ['canDragSounds'])
   },
   methods: {
     setCategoriesQuery(text) {
