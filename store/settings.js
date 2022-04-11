@@ -1,4 +1,4 @@
-export const state = () => ({
+const defaultValues = {
   buttonType: 'modern',
   listButtonType: 'icons',
   listColumns: 1,
@@ -8,9 +8,14 @@ export const state = () => ({
   clickRepeatSound: false,
   clickStopOtherSound: false,
   clickOutsideStop: false,
-})
+}
+
+export const state = () => (Object.assign({}, defaultValues))
 
 export const mutations = {
+  resetValues(state) {
+    Object.assign(state, defaultValues)
+  },
   setButtonType(state, value) {
     state.buttonType = value
   },

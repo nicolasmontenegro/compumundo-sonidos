@@ -25,7 +25,7 @@ export const getters = {
     return state.soundsOrder.map(i => ({
       ...state.sounds[i],
       originalPosition: i,
-      visible: state.soundsFiltered[i]
+      visible: (state.canDragSounds ? true : state.soundsFiltered[i])
     }))
   }
 }
@@ -58,5 +58,9 @@ export const actions = {
         state.soundsOrder.concat([...Array(state.sounds.length - state.soundsOrder.length).keys()].map(i => i + state.soundsOrder.length))
       )
     }
+  },
+  resetOrder({ state, dispatch, commit, getters, rootState, rootGetters }) {
+    commit('setSoundsOrder', [])
+    dispatch('updateSoundsOrder')
   }
 }
