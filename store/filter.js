@@ -43,4 +43,9 @@ export const getters = {
         )
       : prefilter
   },
+  categoriesNotSelected(state) {
+    return state.categoriesList.filter(
+      (category) => !state.categoriesSelected.includes(category)
+    )
+  }
 }
