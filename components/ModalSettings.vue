@@ -24,8 +24,8 @@
             template(v-if="listButtonType === 'list'")
               b-field(label='Cantidad de columnas para la lista')
                 b-numberinput(v-model="listColumns" controls-position="compact" :min="1" :max="4")
-            b-field(label='Espacio de botonera')
-              b-checkbox(v-model="isWide") La botonera ocupa todo el ancho disponible
+            b-field(label='La botonera ocupa todo el ancho disponible')
+              b-switch(v-model="isWide") {{ isWide ? 'Activado' : 'Desactivado'  }}
           b-tab-item(label="Comportamiento" icon="gesture-tap-button")
             b-field(grouped group-multiline label='Al hacer click nuevamente en un botón...')
               b-radio-button(v-model="clickRepeatSound" :native-value="false" type="is-primary is-light is-outlined")
@@ -42,12 +42,9 @@
                 b-icon(icon="call-merge" custom-class="mdi-rotate-90")
                 span Detiene el primer audio
             b-field(grouped group-multiline label='Al hacer click fuera de botón ¿detiene el audio?')
-              b-radio-button(v-model="clickOutsideStop" :native-value="false" type="is-primary is-light is-outlined" :disabled="!clickStopOtherSound")
-                b-icon(icon="close")
-                span No
-              b-radio-button(v-model="clickOutsideStop" :native-value="true" type="is-primary is-light is-outlined" :disabled="!clickStopOtherSound")
-                b-icon(icon="check")
-                span Sí
+              b-switch(v-model="clickOutsideStop" :disabled="!clickStopOtherSound") {{ clickOutsideStop ? 'Sí' : 'No'  }}
+            b-field(grouped group-multiline label='Presionar ESC para detener el audio')
+              b-switch(v-model="keybindingEsc") {{ keybindingEsc ? 'Activado' : 'Desactivado'  }}
           b-tab-item(label="Salida" icon="connection")
             b-field(label="Para usar la opción de salida de audio, primero debes autorizar el uso de micrófono"  v-if="!isAuth && isCompatible")
               b-button(label='Solicitar permiso' type="is-primary"  @click="refreshDevices()")
@@ -174,6 +171,14 @@ export default {
         return this.$store.commit('settings/setClickOutsideStop', newValue)
       },
     },
+    keybindingEsc: {
+      get() {
+        return this.$store.state.settings.keybindingEsc
+      },
+      set(newValue) {
+        return this.$store.commit('settings/setKeybindingEsc', newValue)
+      },
+    },
     ...mapGetters({
       buttonTypes: 'settings/buttonTypes',
       listButtonTypes: 'settings/listButtonTypes',
@@ -219,8 +224,11 @@ export default {
     },
     resetSoundsOrder() {
       this.$store.dispatch('sounds/resetOrder')
+    },
+    keyBindEsc() {
+      this.$nuxt.$emit('clickStopOtherSoundEvent', null)
     }
-  },
+  }
 }
 </script>
 

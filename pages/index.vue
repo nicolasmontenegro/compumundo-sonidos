@@ -2,6 +2,7 @@
   section.pt-3
     FilterSounds
     ListButtons
+    AudioController
 </template>
 
 <script>

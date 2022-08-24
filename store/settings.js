@@ -8,6 +8,7 @@ const defaultValues = {
   clickRepeatSound: false,
   clickStopOtherSound: false,
   clickOutsideStop: false,
+  keybindingEsc: true,
 }
 
 export const state = () => (Object.assign({}, defaultValues))
@@ -43,6 +44,9 @@ export const mutations = {
   },
   setClickOutsideStop(state, value) {
     state.clickOutsideStop = value
+  },
+  setKeybindingEsc(state, value) {
+    state.keybindingEsc = value
   },
 }
 
