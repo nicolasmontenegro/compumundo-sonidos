@@ -25,7 +25,7 @@
               b-field(label='Cantidad de columnas para la lista')
                 b-numberinput(v-model="listColumns" controls-position="compact" :min="1" :max="4")
             b-field(label='La botonera ocupa todo el ancho disponible')
-              b-switch(v-model="isWide") {{ isWide ? 'Activado' : 'Desactivado'  }}
+              b-switch.mb-3(v-model="isWide") {{ isWide ? 'Activado' : 'Desactivado'  }}
           b-tab-item(label="Comportamiento" icon="gesture-tap-button")
             b-field(grouped group-multiline label='Al hacer click nuevamente en un botón...')
               b-radio-button(v-model="clickRepeatSound" :native-value="false" type="is-primary is-light is-outlined")
@@ -42,9 +42,9 @@
                 b-icon(icon="call-merge" custom-class="mdi-rotate-90")
                 span Detiene el primer audio
             b-field(grouped group-multiline label='Al hacer click fuera de botón ¿detiene el audio?')
-              b-switch(v-model="clickOutsideStop" :disabled="!clickStopOtherSound") {{ clickOutsideStop ? 'Sí' : 'No'  }}
+              b-switch.mb-3(v-model="clickOutsideStop" :disabled="!clickStopOtherSound") {{ clickOutsideStop ? 'Sí' : 'No'  }}
             b-field(grouped group-multiline label='Presionar ESC para detener el audio')
-              b-switch(v-model="keybindingEsc") {{ keybindingEsc ? 'Activado' : 'Desactivado'  }}
+              b-switch.mb-3(v-model="keybindingEsc") {{ keybindingEsc ? 'Activado' : 'Desactivado'  }}
           b-tab-item(label="Salida" icon="connection")
             b-field(label="Para usar la opción de salida de audio, primero debes autorizar el uso de micrófono"  v-if="!isAuth && isCompatible")
               b-button(label='Solicitar permiso' type="is-primary"  @click="refreshDevices()")
