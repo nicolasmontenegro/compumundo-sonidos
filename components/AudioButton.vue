@@ -12,7 +12,7 @@
     .button-classic(:class="{'is-small': (templateType === 'list'), 'is-large': (templateType != 'list')}") 
       img(v-if="!isPlaying" src="~assets/transparent_button_normal.png" @click="togglePlayAudio" )
       img(v-else src="~assets/transparent_button_pressed.png" @click="togglePlayAudio")
-  p.is-family-pixel.title.is-7.is-dark(:class="buttonTextStyle" @click="(e) => (templateType === 'list' ? togglePlayAudio() : null ) ")
+  p.sound-button-title.is-family-pixel.title.is-7.is-dark(:class="buttonTextStyle" @click="(e) => (templateType === 'list' ? togglePlayAudio() : null ) ")
     | {{ title }}
   b-taglist.sound-button-tags.m-0(v-if="categories" :class="templateType === 'list' ? 'is-justify-content-end' : 'is-justify-content-center'")
     b-tag.mt-0.mb-1.mx-1(type="is-info" v-for="category in categories" :key="`${title}-${category}`") {{ category }} 
@@ -178,5 +178,9 @@ export default {
 
   .sound-button-drag:hover
     cursor: grab
+
+  .sound-button-title
+    font-weight: 500
+    line-height: 130%
 
 </style>
